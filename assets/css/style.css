@@ -1,0 +1,262 @@
+body {
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #38BFD5;
+}
+
+.sub-heading {
+    font-size: 1.4rem;
+}
+
+.bg-article-fade {
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%);
+    color: white;
+    line-height: 1.8rem;
+    margin-right: 30px;
+    padding: 30px;
+    word-spacing: 3px;
+}
+
+.btn-primary {
+    background: #005582;
+    border: none;
+    border-radius: 28px;
+    color: white;
+    font-weight: 600;
+    padding: 12px 50px;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: #005582;
+}
+
+.btn-primary-ghost {
+    background: transparent;
+    border-color: white;
+    border-radius: 28px;
+    color: white;
+    font-weight: 600;
+    padding: 8px 20px;
+    white-space: nowrap;
+}
+
+.btn-primary-ghost:hover {
+    background: white;
+    color: #005582;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.content {
+    /* Apply safe area */
+    padding: 16px env(safe-area-inset-right) 16px env(safe-area-inset-left);
+}
+
+/**
+ * Main Navigation
+ */
+
+header#main-navigation {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0));
+    padding: 20px 35px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0;
+    width: 100%;
+}
+
+img#logo {
+    height: 50px;
+}
+
+#text-logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-left: 8px;
+}
+
+ul#main-navigation-page-list li {
+    color: white;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+ul#main-navigation-page-list li a {
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+ul#main-navigation-page-list li:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/**
+ * Section: Introduction
+ */
+
+section#intro {
+    /*background: url("../images/bg-intro.jpg") center;*/
+}
+
+#intro-content {
+    padding-top: 160px;
+    padding-bottom: 60px;
+}
+
+section#intro #featured-text-wrapper {
+    background: url("../images/intro-shadow.png");
+    background-size: 100% 100%;
+    padding-top: 80px;
+}
+
+#btn-request-demo {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+section#intro h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+section#intro #intro-text-speciality {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.slideshow-card-image {
+    box-shadow: 0 0 30px #333;
+    margin: 20px;
+    width: 100%;
+}
+
+.slideshow-card-description {
+    background: #005582;
+    box-shadow: 0 0 30px #333;
+    color: white;
+    font-weight: 300;
+    padding: 20px !important;
+    line-height: 1.8rem;
+}
+
+.slideshow-card-description hr {
+    border-top: 2px solid white;
+    width: 60%;
+    margin-left: 0;;
+}
+
+.slideshow-card-description article {
+    margin-bottom: 12px;
+}
+
+/**
+ * Section: About
+ */
+
+section#about {
+    /*background: url("../images/bg-about.jpg") top center;*/
+    padding: 100px 40px;
+}
+
+/**
+ * Section: Vision
+ */
+
+section#vision {
+    padding: 100px;
+}
+
+.card-vision {
+    position: relative;
+}
+
+.card-vision img {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.card-vision-hover{
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    color: white;
+    padding: 30px 20px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    cursor: pointer;
+}
+
+.card-vision-hover:hover {
+    opacity: 1;
+}
+
+/**
+ * Section: Equipment
+ */
+
+section#equipment {
+}
+
+#equipment-bg-filter {
+    background: rgba(0,0,0,0.55);
+    padding: 80px;
+}
+
+#equipment-footer-bg-filter {
+    background: rgba(0,0,0,0.85);
+    padding: 80px;
+}
+
+/**
+ * Section: Contact
+ */
+
+#contact-bg-filter {
+    background: rgba(0,0,0,0.55);
+    min-height: 500px;
+    padding: 80px;
+    color: white;
+}
+
+label {
+    margin-left: 10px;
+}
+
+.form-input {
+    background: rgba(255,255,255,0.4);
+    border: none;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 15px 20px;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.form-input:focus {
+    background: rgba(255,255,255,0.7);
+}
+
+/**
+ * Footer
+ */
+
+footer {
+    background: black;
+    min-height: 400px;
+}
