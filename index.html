@@ -17,7 +17,8 @@
 
     <!-- Included Styles -->
     <link rel="stylesheet" media="all" href="dists/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dists/aos/css/aos.css" />
+    <link rel="stylesheet" media="screen" href="dists/aos/css/aos.css" />
+    <link rel="stylesheet" media="screen" href="dists/flickity/css/flickity.min.css">
 
     <!-- Custom Style -->
     <link rel="stylesheet" media="all" href="assets/css/style.css">
@@ -61,20 +62,61 @@
                 <h1 style="color: white">Aviation Refueling System</h1>
                 <button id="btn-request-demo" class="btn btn-primary text-uppercase font-weight-bold">Request a demo</button>
             </div>
+
             <div id="slideshow-wrapper" class="col-12">
-                <div class="container-fluid slideshow-card" style="max-width: 800px;" data-aos="fade-up">
-                    <div class="row no-gutters">
-                        <div class="col-8" style="box-sizing: border-box">
-                            <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                <div class="carousel">
+                    <div class="carousel-cell">
+                        <div class="container-fluid slideshow-card" style="width: 800px;" data-aos="fade-up">
+                            <div class="row no-gutters">
+                                <div class="col-8" style="box-sizing: border-box">
+                                    <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                </div>
+                                <div class="col-4 slideshow-card-description">
+                                    <h3 class="text-uppercase">Option 2</h3>
+                                    <hr>
+                                    <article>
+                                        Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                        Making this available globally through our secure platform wherever you need.
+                                    </article>
+                                    <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-4 slideshow-card-description">
-                            <h3 class="text-uppercase">Option 2</h3>
-                            <hr>
-                            <article>
-                                Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                Making this available globally through our secure platform wherever you need.
-                            </article>
-                            <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="container-fluid slideshow-card" style="width: 800px;" data-aos="fade-up">
+                            <div class="row no-gutters">
+                                <div class="col-8" style="box-sizing: border-box">
+                                    <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                </div>
+                                <div class="col-4 slideshow-card-description">
+                                    <h3 class="text-uppercase">Option 2</h3>
+                                    <hr>
+                                    <article>
+                                        Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                        Making this available globally through our secure platform wherever you need.
+                                    </article>
+                                    <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="container-fluid slideshow-card" style="width: 800px;" data-aos="fade-up">
+                            <div class="row no-gutters">
+                                <div class="col-8" style="box-sizing: border-box">
+                                    <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                </div>
+                                <div class="col-4 slideshow-card-description">
+                                    <h3 class="text-uppercase">Option 2</h3>
+                                    <hr>
+                                    <article>
+                                        Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                        Making this available globally through our secure platform wherever you need.
+                                    </article>
+                                    <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -415,6 +457,7 @@
     <script src="dists/parallax/js/jquery.parallax.min.js"></script>
     <script src="dists/paroller/js/jquery.paroller.min.js"></script> <!-- https://github.com/tgomilar/paroller.js/ -->
     <script src="dists/aos/js/aos.js"></script>
+    <script src="dists/flickity/js/flickity.pkgd.min.js"></script>
 
     <!-- Custom Scripts -->
     <script type="text/javascript">
@@ -422,9 +465,18 @@
         initialize();
 
         function initialize() {
+            initializeCarousel();
             initializeAnimateOnScroll();
             initializeParallaxBackgrounds();
-            initializeParallaxElements()
+            initializeParallaxElements();
+        }
+
+        function initializeCarousel() {
+            $('.carousel').flickity({
+                // options
+                initialIndex: 1,
+                pageDots: false
+            });
         }
 
         function initializeAnimateOnScroll() {

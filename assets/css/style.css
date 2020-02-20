@@ -135,7 +135,7 @@ section#intro #intro-text-speciality {
 }
 
 .slideshow-card-image {
-    box-shadow: 0 0 30px #333;
+    box-shadow: 0 0 20px #333;
     margin: 20px;
     width: 100%;
 }
@@ -158,6 +158,34 @@ section#intro #intro-text-speciality {
 .slideshow-card-description article {
     margin-bottom: 12px;
 }
+
+.carousel {
+
+}
+
+.carousel-cell {
+    margin-right: 10px;
+}
+
+/* cell number */
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+
+.carousel .flickity-page-dots li {
+    background: #777;
+    opacity: 1;
+}
+
+.carousel .flickity-page-dots li.is-selected {
+    background: #ddd;
+    opacity: 1;
+}
+
 
 /**
  * Section: About
