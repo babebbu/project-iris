@@ -15,11 +15,9 @@
     <!-- View Port -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- Bootstrap -->
+    <!-- Included Styles -->
     <link rel="stylesheet" media="all" href="dists/bootstrap/css/bootstrap.min.css">
-
-    <!-- Animate on Scroll -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="dists/aos/css/aos.css" />
 
     <!-- Custom Style -->
     <link rel="stylesheet" media="all" href="assets/css/style.css">
@@ -132,7 +130,7 @@
                     </article>
                 </div>
             </div>
-            <div class="row" style="margin: 100px 0;" data-aos="fade-in">
+            <div class="row" style="margin: 60px 0;" data-aos="fade-in">
                 <div class="col-lg-4">
                     <div class="card-vision" id="icon-1">
                         <img src="assets/images/icon-vision-1.jpg">
@@ -411,39 +409,61 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- Scripts -->
+    <!-- Included Scripts -->
     <script src="dists/jquery/js/jquery-3.4.1.min.js"></script>
     <script src="dists/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="dists/parallax/js/jquery.parallax.min.js"></script>
-    <script src="https://unpkg.com/paroller.js@1.3.1/dist/jquery.paroller.min.js"></script> <!-- https://github.com/tgomilar/paroller.js/ -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="dists/paroller/js/jquery.paroller.min.js"></script> <!-- https://github.com/tgomilar/paroller.js/ -->
+    <script src="dists/aos/js/aos.js"></script>
 
+    <!-- Custom Scripts -->
     <script type="text/javascript">
-        AOS.init();
-        $('section#intro').parallax({
-            src: 'assets/images/bg-intro.jpg',
-            speed: 0.3,
-        });
-        $('section#about').parallax({
-            src: 'assets/images/bg-about.jpg',
-            speed: 0.3,
-        });
-        $('section#equipment').parallax({
-            src: 'assets/images/bg-equipment.jpg',
-            posY: 'bottom',
-            speed: 0.8,
-        });
-        $('section#contact').parallax({
-            src: 'assets/images/bg-contact.jpg',
-            posY: 'bottom',
-            speed: 0.8,
-        });
-        $("#featured-text-wrapper").paroller({ factor: -0.3, type: 'foreground', direction: 'vertical' });
-        $("#slideshow-wrapper").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
-        $("#article-about").paroller({ factor: 0.2, type: 'foreground', direction: 'vertical' });
-        $(".card-vision#icon-1").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
-        $(".card-vision#icon-2").paroller({ factor: 0.15, type: 'foreground', direction: 'vertical' });
-        $(".card-vision#icon-3").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
+
+        initialize();
+
+        function initialize() {
+            initializeAnimateOnScroll();
+            initializeParallaxBackgrounds();
+            initializeParallaxElements()
+        }
+
+        function initializeAnimateOnScroll() {
+            AOS.init();
+        }
+
+        function initializeParallaxBackgrounds() {
+            $('section#intro').parallax({
+                src: 'assets/images/bg-intro.jpg',
+                speed: 0.3,
+            });
+
+            $('section#about').parallax({
+                src: 'assets/images/bg-about.jpg',
+                speed: 0.3,
+            });
+
+            $('section#equipment').parallax({
+                src: 'assets/images/bg-equipment.jpg',
+                posY: 'bottom',
+                speed: 0.8,
+            });
+
+            $('section#contact').parallax({
+                src: 'assets/images/bg-contact.jpg',
+                posY: 'bottom',
+                speed: 0.8,
+            });
+        }
+
+        function initializeParallaxElements() {
+            $("#featured-text-wrapper").paroller({ factor: -0.3, type: 'foreground', direction: 'vertical' });
+            $("#slideshow-wrapper").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
+            $("#article-about").paroller({ factor: 0.2, type: 'foreground', direction: 'vertical' });
+
+            $(".card-vision#icon-1").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
+            $(".card-vision#icon-2").paroller({ factor: 0.15, type: 'foreground', direction: 'vertical' });
+            $(".card-vision#icon-3").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
+        }
     </script>
 
 </body>
