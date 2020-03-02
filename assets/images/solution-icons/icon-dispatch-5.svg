@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38.02" height="57" viewBox="0 0 38.02 57">
+  <g id="Group_11155" data-name="Group 11155" transform="translate(-1532.757 -3601)">
+    <g id="Group_10502" data-name="Group 10502" transform="translate(1532.757 3601)">
+      <path id="Path_32573" data-name="Path 32573" d="M1144.067,71.791h-18.087a9.978,9.978,0,0,0-9.967,9.966v37.068a9.978,9.978,0,0,0,9.967,9.967h18.087a9.977,9.977,0,0,0,9.966-9.967V81.757A9.977,9.977,0,0,0,1144.067,71.791Zm-18.087,2.26h18.087a7.715,7.715,0,0,1,7.706,7.706v35.937h-33.5V81.757A7.715,7.715,0,0,1,1125.979,74.051Zm18.087,52.48h-18.087a7.712,7.712,0,0,1-7.614-6.576h33.314A7.711,7.711,0,0,1,1144.067,126.531Z" transform="translate(-1116.013 -71.791)" fill="#fff"/>
+      <g id="Group_10500" data-name="Group 10500" transform="translate(13.813 4.578)">
+        <path id="Path_32574" data-name="Path 32574" d="M1150.277,82.336h-8.134a1.13,1.13,0,0,1,0-2.26h8.134a1.13,1.13,0,0,1,0,2.26Z" transform="translate(-1141.013 -80.076)" fill="#fff"/>
+      </g>
+      <g id="Group_10501" data-name="Group 10501" transform="translate(16.631 50.12)">
+        <path id="Path_32575" data-name="Path 32575" d="M1149.74,164.761h-2.5a1.13,1.13,0,1,1,0-2.26h2.5a1.13,1.13,0,1,1,0,2.26Z" transform="translate(-1146.113 -162.501)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Group_11141" data-name="Group 11141" transform="translate(1544.9 3617.072)">
+      <g id="Group_11123" data-name="Group 11123">
+        <g id="Group_11122" data-name="Group 11122">
+          <path id="Path_33685" data-name="Path 33685" d="M213.715,212.9a.721.721,0,0,1-.617-.349l-5.431-8.994h0a7.066,7.066,0,1,1,12.1,0l-5.43,8.994A.722.722,0,0,1,213.715,212.9ZM208.9,202.813l4.813,7.971,4.813-7.971a5.623,5.623,0,1,0-9.627,0Z" transform="translate(-206.646 -192.845)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_11125" data-name="Group 11125" transform="translate(2.925 2.837)">
+        <g id="Group_11124" data-name="Group 11124">
+          <path id="Path_33686" data-name="Path 33686" d="M215.345,205.552a4.145,4.145,0,1,1,4.144-4.145A4.149,4.149,0,0,1,215.345,205.552Zm0-6.847a2.7,2.7,0,1,0,2.7,2.7A2.7,2.7,0,0,0,215.345,198.7Z" transform="translate(-211.201 -197.262)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

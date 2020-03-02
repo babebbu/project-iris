@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="527.819" height="163.166" viewBox="0 0 527.819 163.166">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#006885"/>
+      <stop offset="0.138" stop-color="#00607b"/>
+      <stop offset="0.366" stop-color="#004c62"/>
+      <stop offset="0.656" stop-color="#002c39"/>
+      <stop offset="0.995"/>
+      <stop offset="1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#90dbff"/>
+      <stop offset="0.13" stop-color="#86d3f7"/>
+      <stop offset="0.345" stop-color="#6dbfe1"/>
+      <stop offset="0.619" stop-color="#449ebe"/>
+      <stop offset="0.938" stop-color="#0b718f"/>
+      <stop offset="1" stop-color="#006885"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f2f2f2"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.54" gradientTransform="translate(0.067) scale(0.866 1)" gradientUnits="objectBoundingBox">
+      <stop offset="0.075" stop-color="#fff"/>
+      <stop offset="0.616" stop-color="#f0f0f0"/>
+      <stop offset="1" stop-color="#ccc"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient-9" x1="-0.207" y1="0.5" x2="1.207" y2="0.5" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-11" x1="-0.207" y1="0.5" x2="1.207" y2="0.5" xlink:href="#linear-gradient-2"/>
+  </defs>
+  <g id="Group_11253" data-name="Group 11253" transform="translate(-1229.835 -3310.704)">
+    <g id="Group_5913" data-name="Group 5913" transform="translate(1315 3321.037)" opacity="0.6">
+      <path id="Path_16968" data-name="Path 16968" d="M918.259,291.613H557.877l-41.136,71.249,41.136,71.249H918.259L959.4,362.863Z" transform="translate(-516.741 -291.613)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_5914" data-name="Group 5914" transform="translate(1229.835 3310.704)">
+      <path id="Path_16969" data-name="Path 16969" d="M627.993,287.963h-94.2l-47.1,81.583,47.1,81.583h94.2l47.1-81.583Z" transform="translate(-486.687 -287.963)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_16970" data-name="Path 16970" d="M614.31,291.613H532.038L490.9,362.863l41.136,71.249H614.31l41.136-71.249Z" transform="translate(-478.97 -281.28)" fill="url(#linear-gradient-3)"/>
+      <path id="Path_16971" data-name="Path 16971" d="M606.708,293.641H531.065L493.243,359.15l37.821,65.509h75.643l37.821-65.509Z" transform="translate(-474.683 -277.567)" fill="url(#radial-gradient)"/>
+    </g>
+    <text id="Dispatch" transform="translate(1465 3406.972)" fill="#fff" font-size="40" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">Dispatch</tspan></text>
+    <g id="Consult-Talk" transform="translate(1288.847 3354.066)">
+      <rect id="Rectangle_97" data-name="Rectangle 97" width="2.473" height="2.473" transform="translate(17.314 28.839)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_98" data-name="Rectangle 98" width="2.473" height="2.473" transform="translate(29.68 28.839)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_16977" data-name="Path 16977" d="M580.671,345.734l-4.833-.691a17.128,17.128,0,0,0-.812-1.976l2.924-3.9a1.237,1.237,0,0,0-.116-1.617l-5.246-5.249a1.236,1.236,0,0,0-.75-.348v-11.9a9.886,9.886,0,0,0-1.945-16.652,1.237,1.237,0,0,0-1.648.592,1.253,1.253,0,0,0-.119.527v6.925l-2.471.827-2.474-.827v-6.925a1.235,1.235,0,0,0-1.764-1.113,9.792,9.792,0,0,0-5.656,8.929,9.9,9.9,0,0,0,3.712,7.717v8.357h-3.712a1.237,1.237,0,0,0-1.223,1.062l-.8,5.6,2.449.351.648-4.538h5.274l.648,4.538a1.239,1.239,0,0,0,.878,1.011,14.837,14.837,0,0,1,2.97,1.223,1.238,1.238,0,0,0,1.336-.1l3.661-2.746,3.731,3.731-2.752,3.66a1.239,1.239,0,0,0-.1,1.336,14.67,14.67,0,0,1,1.22,2.97,1.242,1.242,0,0,0,1.013.878l4.538.648v5.274l-4.538.648a1.238,1.238,0,0,0-1.013.878,14.576,14.576,0,0,1-1.22,2.967,1.243,1.243,0,0,0,.1,1.339l2.746,3.66-3.731,3.731-3.658-2.757a1.237,1.237,0,0,0-1.339-.093,14.741,14.741,0,0,1-2.967,1.22,1.238,1.238,0,0,0-.878,1.011l-.646,4.541H557v-5.229a13.679,13.679,0,0,0-.558-3.859,11.268,11.268,0,1,0-7.907-8.734l-.088-.04-10-4v-1.9a13.72,13.72,0,0,0,4.3-3.445h3.12a3.71,3.71,0,0,0,3.709-3.709v-2.7a3.714,3.714,0,0,0,2.474-3.482v-3.711a3.714,3.714,0,0,0-2.474-3.482V324.7a17.313,17.313,0,1,0-34.626,0v1.464a3.708,3.708,0,0,0-2.472,3.482v3.711a3.709,3.709,0,0,0,3.709,3.709h2.474c.079,0,.156-.011.232-.017a13.628,13.628,0,0,0,7.188,9.645v1.9l-10,4a13.542,13.542,0,0,0-8.552,12.632v11.412a1.238,1.238,0,0,0,1.237,1.237h46.992A1.238,1.238,0,0,0,557,376.637v-3.709h6.183a1.24,1.24,0,0,0,1.226-1.062l.688-4.833a17.183,17.183,0,0,0,1.979-.812l3.9,2.924a1.238,1.238,0,0,0,1.617-.116l5.246-5.246a1.237,1.237,0,0,0,.116-1.617l-2.924-3.9a17.186,17.186,0,0,0,.812-1.979l4.833-.688a1.237,1.237,0,0,0,1.059-1.223v-7.42A1.235,1.235,0,0,0,580.671,345.734Zm-13.6-10.619c-.059-.028-.124-.048-.184-.074V319.754h-2.466v9.807l-.011-.091a1.24,1.24,0,0,0-1.226-1.062h-1.237v-8.977a1.242,1.242,0,0,0-.529-1.016,7.418,7.418,0,0,1-1.851-10.328,7.513,7.513,0,0,1,1.144-1.291v5.537a1.236,1.236,0,0,0,.846,1.172l3.711,1.237a1.231,1.231,0,0,0,.781,0l3.709-1.237a1.232,1.232,0,0,0,.847-1.172V306.8a7.43,7.43,0,0,1-.7,11.624,1.238,1.238,0,0,0-.532,1.011V333.4Zm-16.253,15.554a8.721,8.721,0,1,1,4.122,7.346,13.489,13.489,0,0,0-3.23-3.559A8.414,8.414,0,0,1,550.815,350.668Zm-4.946-9.892h-1.5a13.509,13.509,0,0,0,1.268-3.728c.079,0,.156.017.235.017H547.1v2.474A1.236,1.236,0,0,1,545.87,340.777Zm-2.474-13.6a3.731,3.731,0,0,1-2.967-1.486l-2.228-2.967a1.231,1.231,0,0,0-.832-.484,1.249,1.249,0,0,0-.929.26l-4.15,3.315a6.206,6.206,0,0,1-3.856,1.362h-7.3v-1.237a11.13,11.13,0,1,1,22.26,0Zm6.183,6.183a1.234,1.234,0,0,1-1.237,1.234H545.87v-6.183h2.472a1.236,1.236,0,0,1,1.237,1.237Zm-17.312-23.5A14.854,14.854,0,0,1,547.1,324.7v1.237H545.87a13.6,13.6,0,1,0-27.206,0h-1.237V324.7A14.855,14.855,0,0,1,532.267,309.859Zm-16.077,24.732a1.236,1.236,0,0,1-1.237-1.234v-3.711a1.238,1.238,0,0,1,1.237-1.237h2.474v6.183Zm4.946,0v-4.946h7.3a8.677,8.677,0,0,0,5.4-1.9l3.157-2.522,1.455,1.948a6.216,6.216,0,0,0,4.946,2.471v4.946a11.069,11.069,0,0,1-1.883,6.186h-9.246v2.472h6.978a11.121,11.121,0,0,1-18.11-8.657Zm11.132,13.6a13.475,13.475,0,0,0,3.709-.526v1.764a3.71,3.71,0,1,1-7.42,0v-1.764A13.48,13.48,0,0,0,532.267,348.194ZM554.524,375.4H547.1V361.8h-2.472v13.6H519.9V361.8h-2.471v13.6h-7.42V365.225a11.081,11.081,0,0,1,7-10.336l9.354-3.74a6.143,6.143,0,0,0,11.819,0l9.353,3.74a11.076,11.076,0,0,1,7,10.336Z" transform="translate(-507.532 -303.28)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_99" data-name="Rectangle 99" width="2.473" height="2.473" transform="translate(50.703 30.076)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_100" data-name="Rectangle 100" width="2.473" height="2.473" transform="translate(50.703 62.228)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_101" data-name="Rectangle 101" width="2.473" height="2.473" transform="translate(61.557 58.756) rotate(-45)" fill="url(#linear-gradient-9)"/>
+      <rect id="Rectangle_102" data-name="Rectangle 102" width="2.473" height="2.473" transform="translate(66.779 46.152)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_103" data-name="Rectangle 103" width="2.473" height="2.473" transform="matrix(0.707, -0.707, 0.707, 0.707, 61.558, 36.021)" fill="url(#linear-gradient-11)"/>
+    </g>
+  </g>
+</svg>

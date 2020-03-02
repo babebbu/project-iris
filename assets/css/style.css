@@ -1,9 +1,13 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Kanit:300,400,500,600,700&display=swap');
 
+body {
+    font-family: Kanit, 'Helvetica Neue', sans-serif;
+    font-weight: 300;
 }
 
 h1,h2,h3,h4,h5,h6 {
     color: #38BFD5;
+    font-weight: 400;
 }
 
 .sub-heading {
@@ -24,7 +28,7 @@ h1,h2,h3,h4,h5,h6 {
     border: none;
     border-radius: 28px;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     padding: 12px 50px;
 }
 
@@ -38,7 +42,7 @@ h1,h2,h3,h4,h5,h6 {
     border-color: white;
     border-radius: 28px;
     color: white;
-    font-weight: 600;
+    font-weight: 400;
     padding: 8px 20px;
     white-space: nowrap;
 }
@@ -62,7 +66,8 @@ h1,h2,h3,h4,h5,h6 {
  */
 
 header#main-navigation {
-    background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0));
+    /*background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);*/
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
     padding: 20px 35px;
     position: absolute;
     text-transform: uppercase;
@@ -71,7 +76,7 @@ header#main-navigation {
 }
 
 img#logo {
-    height: 50px;
+    height: 100px;
 }
 
 #text-logo {
@@ -81,10 +86,16 @@ img#logo {
     margin-left: 8px;
 }
 
+ul#main-navigation-page-list {
+    margin-bottom: 0;
+}
+
 ul#main-navigation-page-list li {
     color: white;
     display: inline-block;
     margin: 0 5px;
+    background-color: transparent;
+    transition: background-color 0.15s ease-out;
 }
 
 ul#main-navigation-page-list li a {
@@ -98,11 +109,15 @@ ul#main-navigation-page-list li a {
 
 ul#main-navigation-page-list li:hover {
     background: rgba(255,255,255,0.2);
+    /*background-color: rgba(0,0,0,0.15);*/
+}
+ul#main-navigation-page-list li a:hover {
+    color: #555;
 }
 
 /**
- * Section: Introduction
- */
+* Section: Introduction
+*/
 
 section#intro {
     /*background: url("../images/bg-intro.jpg") center;*/
@@ -126,12 +141,11 @@ section#intro #featured-text-wrapper {
 
 section#intro h1 {
     font-size: 3rem;
-    font-weight: bold;
 }
 
 section#intro #intro-text-speciality {
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .slideshow-card-image {
@@ -140,13 +154,17 @@ section#intro #intro-text-speciality {
     width: 100%;
 }
 
+.slideshow-card-description-wrapper {
+    padding-right: 20px !important;
+}
+
 .slideshow-card-description {
     background: #005582;
     box-shadow: 0 0 30px #333;
     color: white;
     font-weight: 300;
     padding: 20px !important;
-    line-height: 1.8rem;
+    line-height: 1.6rem;
 }
 
 .slideshow-card-description hr {
@@ -159,12 +177,17 @@ section#intro #intro-text-speciality {
     margin-bottom: 12px;
 }
 
-.carousel {
+.cell-content-inactive {
+    position: relative;
+    margin-top: 50px;
+}
 
+.carousel {
 }
 
 .carousel-cell {
-    margin-right: 10px;
+    width: 700px;
+    position: relative;
 }
 
 /* cell number */
@@ -235,6 +258,74 @@ section#vision {
 }
 
 /**
+ * Section: Solution
+ */
+
+#solution-bg-filter {
+    background: rgba(0,0,0,0.7);
+}
+
+.product-list {
+    opacity: 0;
+    margin: 10px 0;
+    transition: opacity 0.5s ease;
+}
+
+.solution-item {
+    margin: 5px;
+    width: 190px;
+}
+
+.solution-item-cell {
+    display: inline-block;
+    list-style-type: none;
+    color: white;
+    margin-right: 10px;
+}
+
+.cell-img {
+    text-align: center;
+    min-width: 40px;
+}
+
+.cell-text {
+    text-align: left;
+}
+
+.item-img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.item-text {
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 16px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.solution-category-icon {
+    max-width: 380px;
+    width: 80%;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.solution-category-icon:hover {
+    opacity: 1;
+}
+
+.solution-category-icon.active {
+    opacity: 1;
+}
+
+.bordered {
+    border: 0px solid #ccc;
+}
+
+/**
  * Section: Equipment
  */
 
@@ -274,6 +365,7 @@ label {
     padding: 15px 20px;
     height: 2.5rem;
     width: 100%;
+    font-weight: 300;
 }
 
 .form-input:focus {
@@ -310,7 +402,7 @@ footer li {
 }
 
 .logo-img-footer {
-
+    width: 80%;
 }
 
 .logo-text-footer {
