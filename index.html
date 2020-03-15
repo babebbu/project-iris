@@ -19,6 +19,7 @@
     <link rel="stylesheet" media="all" href="dists/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" media="screen" href="dists/aos/css/aos.css" />
     <link rel="stylesheet" media="screen" href="dists/flickity/css/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
 
     <!-- Custom Style -->
     <link rel="stylesheet" media="all" href="assets/css/style.css">
@@ -65,112 +66,123 @@
 
             <div id="slideshow-wrapper" class="col-12">
                 <div class="carousel">
-                    <div class="carousel-cell" style="width: 350px; margin-right: -40px;">
-                        <div class="cell-content-inactive">
-                            <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
-                            <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
-                                <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 1</h3>
+                    <div class="carousel-cell">
+                        <div class="content-wrapper">
+                            <div class="cell-content-inactive" style="width: 350px; margin-left: auto; margin-right: -45px;">
+                                <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
+                                <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
+                                    <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 1</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="cell-content-active d-none">
-                            <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
-                                <div class="row no-gutters">
-                                    <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
-                                        <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
-                                    </div>
-                                    <div class="col-4 slideshow-card-description-wrapper">
-                                        <div class="slideshow-card-description">
-                                            <h3 class="text-uppercase">Option 1</h3>
-                                            <hr>
-                                            <article>
-                                                Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                                Making this available globally through our secure platform wherever you need.
-                                            </article>
-                                            <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                            <div class="cell-content-active d-none">
+                                <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
+                                    <div class="row no-gutters">
+                                        <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
+                                            <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                        </div>
+                                        <div class="col-4 slideshow-card-description-wrapper">
+                                            <div class="slideshow-card-description">
+                                                <h3 class="text-uppercase">Option 1</h3>
+                                                <hr>
+                                                <article>
+                                                    Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                                    Making this available globally through our secure platform wherever you need.
+                                                </article>
+                                                <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-cell" style="z-index: 5">
-                        <div class="cell-content-inactive d-none">
-                            <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
-                            <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
-                                <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 2</h3>
+
+                    <div class="carousel-cell">
+                        <div class="content-wrapper">
+                            <div class="cell-content-inactive d-none" style="width: 350px; margin-left: -45px; margin-right: auto;">
+                                <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
+                                <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
+                                    <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 2</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="cell-content-active">
-                            <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
-                                <div class="row no-gutters">
-                                    <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
-                                        <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
-                                    </div>
-                                    <div class="col-4 slideshow-card-description-wrapper">
-                                        <div class="slideshow-card-description">
-                                            <h3 class="text-uppercase">Option 2</h3>
-                                            <hr>
-                                            <article>
-                                                Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                                Making this available globally through our secure platform wherever you need.
-                                            </article>
-                                            <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                            <div class="cell-content-active d-block">
+                                <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
+                                    <div class="row no-gutters">
+                                        <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
+                                            <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                        </div>
+                                        <div class="col-4 slideshow-card-description-wrapper">
+                                            <div class="slideshow-card-description">
+                                                <h3 class="text-uppercase">Option 2</h3>
+                                                <hr>
+                                                <article>
+                                                    Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                                    Making this available globally through our secure platform wherever you need.
+                                                </article>
+                                                <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-cell" style="width: 350px; margin-left: -40px;">
-                        <div class="cell-content-inactive">
-                            <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
-                            <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
-                                <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 3</h3>
+
+                    <div class="carousel-cell">
+                        <div class="content-wrapper">
+                            <div class="cell-content-inactive" style="width: 350px; margin-left: -45px; margin-right: auto;">
+                                <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
+                                <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
+                                    <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 3</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="cell-content-active d-none">
-                            <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
-                                <div class="row no-gutters">
-                                    <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
-                                        <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
-                                    </div>
-                                    <div class="col-4 slideshow-card-description-wrapper">
-                                        <div class="slideshow-card-description">
-                                            <h3 class="text-uppercase">Option 3</h3>
-                                            <hr>
-                                            <article>
-                                                Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                                Making this available globally through our secure platform wherever you need.
-                                            </article>
-                                            <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                            <div class="cell-content-active d-none">
+                                <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
+                                    <div class="row no-gutters">
+                                        <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
+                                            <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                        </div>
+                                        <div class="col-4 slideshow-card-description-wrapper">
+                                            <div class="slideshow-card-description">
+                                                <h3 class="text-uppercase">Option 3</h3>
+                                                <hr>
+                                                <article>
+                                                    Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                                    Making this available globally through our secure platform wherever you need.
+                                                </article>
+                                                <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-cell d-none" style="width: 350px; margin-left: -40px;">
-                        <div class="cell-content-inactive">
-                            <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
-                            <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
-                                <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 4</h3>
+
+                    <div class="carousel-cell">
+                        <div class="content-wrapper">
+                            <div class="cell-content-inactive" style="width: 350px; margin-left: -45px; margin-right: auto;">
+                                <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
+                                <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
+                                    <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 4</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="cell-content-active d-none">
-                            <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
-                                <div class="row no-gutters">
-                                    <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
-                                        <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
-                                    </div>
-                                    <div class="col-4 slideshow-card-description-wrapper">
-                                        <div class="slideshow-card-description">
-                                            <h3 class="text-uppercase">Option 4</h3>
-                                            <hr>
-                                            <article>
-                                                Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                                Making this available globally through our secure platform wherever you need.
-                                            </article>
-                                            <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                            <div class="cell-content-active d-none">
+                                <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
+                                    <div class="row no-gutters">
+                                        <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
+                                            <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                        </div>
+                                        <div class="col-4 slideshow-card-description-wrapper">
+                                            <div class="slideshow-card-description">
+                                                <h3 class="text-uppercase">Option 4</h3>
+                                                <hr>
+                                                <article>
+                                                    Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                                    Making this available globally through our secure platform wherever you need.
+                                                </article>
+                                                <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -843,6 +855,7 @@
     <script src="dists/paroller/js/jquery.paroller.min.js"></script> <!-- https://github.com/tgomilar/paroller.js/ -->
     <script src="dists/aos/js/aos.js"></script>
     <script src="dists/flickity/js/flickity.pkgd.min.js"></script> <!-- https://flickity.metafizzy.co/ -->
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
 
     <!-- Custom Scripts -->
     <script src="assets/js/script.js"></script>

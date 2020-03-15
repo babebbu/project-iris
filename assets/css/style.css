@@ -200,7 +200,7 @@ section#intro #intro-text-speciality {
 .cell-content-active {
     transition: opacity 0.5s ease;
 }
-
+/*
 .carousel {
 }
 
@@ -209,7 +209,6 @@ section#intro #intro-text-speciality {
     position: relative;
 }
 
-/* cell number */
 .carousel-cell:before {
     display: block;
     text-align: center;
@@ -227,7 +226,42 @@ section#intro #intro-text-speciality {
     background: #ddd;
     opacity: 1;
 }
+*/
 
+.carousel {
+
+}
+
+.carousel-cell {
+    width: 700px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+    line-height: 200px;
+    color: white;
+
+    opacity: 1;
+    transition: opacity 0s ease;
+    z-index: 1;
+}
+
+.carousel-cell.is-selected {
+    z-index: 99;
+}
+
+.content-wrapper {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-wrapper.active {
+
+}
+
+.cell-content-inactive {
+    position: relative;
+}
 
 /**
  * Section: About

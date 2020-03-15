@@ -1,3 +1,104 @@
+class Carousel {
+
+    constructor() {
+        const INITIAL_INDEX = 1;
+        this.currentIndex = INITIAL_INDEX;
+        this.flickity = new Flickity('.carousel', {
+            initialIndex: INITIAL_INDEX,
+            pageDots: false,
+        });
+        this.flickity.on('change', (index) => {
+            this.currentIndex = index;
+            let cell = $('.carousel').find('.carousel-cell')[index];
+            let contentWrapper = $(cell).children('.content-wrapper');
+            this.deactivateContentWrapper();
+            this.activateContentWrapper(contentWrapper);
+            //this.hideOverflow();
+        })
+    }
+
+    activateContentWrapper(contentWrapper) {
+
+        console.debug(contentWrapper.html());
+
+        contentWrapper.addClass('active');
+
+        contentWrapper.find('.cell-content-inactive')
+            .removeClass('d-block')
+            .addClass('d-none');
+
+        contentWrapper.find('.cell-content-active')
+            .removeClass('d-none')
+            .addClass('d-block')
+
+    }
+
+    deactivateContentWrapper() {
+        for(let i = 0; i < this.getCells().length; i++) {
+            let cell = $(this.getCell(i));
+            let wrapper = cell.children('.content-wrapper');
+
+            $('.content-wrapper').removeClass('active');
+
+            cell.find('.cell-content-inactive')
+                .removeClass('d-none')
+                .addClass('d-block')
+                .css('width', '350px');
+
+            cell.find('.cell-content-active')
+                .removeClass('d-block')
+                .addClass('d-none');
+
+            //console.debug(`currentIndex = ${this.currentIndex}, i = ${i}, diff = ${this.currentIndex - i}`);
+
+            if(this.isLeftHandSide(i)) {
+                cell.find('.cell-content-inactive').css('margin-left', 'auto');
+                cell.find('.cell-content-inactive').css('margin-right', '-45px');
+            }
+            else if(this.isRightHandSide(i)) {
+                cell.find('.cell-content-inactive').css('margin-left', '-45px');
+                cell.find('.cell-content-inactive').css('margin-right', 'auto');
+            }
+
+            if(this.isOverflow(i)) {
+                cell.css('opacity', '0');
+            }
+            else {
+                cell.css('opacity', '1');
+            }
+
+        }
+    }
+
+    hideOverflow() {
+        console.debug(`currentCell = ${this.currentIndex}`)
+    }
+
+    getCell(index) {
+        return this.getCells()[index];
+    }
+
+    getCells() {
+        return $('.carousel').find('.carousel-cell');
+    }
+
+    getIndexDifference(index) {
+        return this.currentIndex - index;
+    }
+
+    isLeftHandSide(index) {
+        return this.getIndexDifference(index) > 0;
+    }
+
+    isRightHandSide(index) {
+        return this.getIndexDifference(index) < 0;
+    }
+
+    isOverflow(index) {
+        return this.getIndexDifference(index) < -1 || this.getIndexDifference(index) > 1
+    }
+}
+
 // STATE
 let selectedCellIndex = 1;
 let previousCellIndex = 0;
@@ -43,102 +144,7 @@ function adjustParallaxElements() {
 }
 
 function initializeCarousel() {
-    let carousel = $('.carousel').flickity({
-        // options
-        initialIndex: 1,
-        pageDots: false
-    });
-
-    carousel.on( 'select.flickity', function( event, index ) {
-        console.log( 'Flickity selected cell ' + index );
-
-        previousCellIndex = selectedCellIndex;
-        selectedCellIndex = index;
-
-        //const cells = $('.carousel').find('.carousel-cell');
-
-        const previous = index - 1;
-        const next = index + 1;
-
-        //const previousCell = cells[previousIndex];
-        //const currentCell = cells[index];
-        //const nextCell = cells[nextIndex];
-
-        if(previous >= 0) {
-            deactivateCarouselCell(getCell(previous));
-            //carousel.flickity('reposition');
-        }
-
-        if(next < getCells().length) {
-            deactivateCarouselCell(getCell(next));
-            //carousel.flickity('reposition');
-        }
-
-        if(selectedCellIndex - previousCellIndex > 0) {
-            showCell(getCell(next));
-            hideCell(getCell(previous - 1))
-        } else if (selectedCellIndex - previousCellIndex < 0) {
-            showCell(getCell(previous));
-            hideCell(getCell(next + 1))
-        }
-
-        activateCarouselCell(getCell(index));
-        //carousel.flickity('reposition');
-    });
-
-    carousel.on('change.flickity', function(event, index) {
-        console.log('changing');
-    })
-}
-
-function getCells() {
-    return $('.carousel').find('.carousel-cell');
-}
-
-function getCell(index) {
-    return getCells()[index];
-}
-
-function showCell(cell) {
-    $(cell).removeClass('d-none').addClass('d-block')
-}
-
-function hideCell(cell) {
-    $(cell).removeClass('d-block').addClass('d-none')
-}
-
-function activateCarouselCell(cell) {
-    $(cell)
-        .find('.cell-content-inactive')
-        .removeClass('d-block')
-        .addClass('d-none');
-        //.css('height', '0')
-        //.css('margin-top', '0')
-        //.css('opacity', '0');
-
-    $(cell)
-        .find('.cell-content-active')
-        .removeClass('d-none')
-        .addClass('d-block')
-        //.css('opacity', '1');
-
-    $(cell).css('width', '700px');
-    $(cell).css('z-index', '5');
-}
-
-function deactivateCarouselCell(cell) {
-    $(cell)
-        .find('.cell-content-inactive')
-        .removeClass('d-none')
-        .addClass('d-block');
-
-    $(cell)
-        .find('.cell-content-active')
-        .removeClass('d-block')
-        .addClass('d-none');
-
-    $(cell).css('width', '350px');
-    $(cell).css('z-index', '0');
+    new Carousel();
 }
 
 function initializeAnimateOnScroll() {
