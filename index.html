@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <nav class="col text-right">
+            <nav class="col text-right d-none d-lg-block">
                 <ul id="main-navigation-page-list">
                     <li><a href="">Introduction</a></li>
                     <li><a href="">About Iris</a></li>
@@ -149,6 +149,34 @@
                             </div>
                         </div>
                     </div>
+                    <div class="carousel-cell d-none" style="width: 350px; margin-left: -40px;">
+                        <div class="cell-content-inactive">
+                            <img class="" style="width: 100%;" src="assets/images/slides/slideshow-img-1.png">
+                            <div class="slideshow-card-description" style="position: absolute; bottom: 0; width: 100%;">
+                                <h3 class="text-uppercase text-center" style="color: white; margin-bottom: 0">Option 4</h3>
+                            </div>
+                        </div>
+                        <div class="cell-content-active d-none">
+                            <div class="container-fluid slideshow-card" style="" data-aos="fade-up">
+                                <div class="row no-gutters">
+                                    <div class="col-8 slideshow-card-image-wrapper" style="box-sizing: border-box">
+                                        <img class="slideshow-card-image" src="assets/images/slides/slideshow-img-1.png">
+                                    </div>
+                                    <div class="col-4 slideshow-card-description-wrapper">
+                                        <div class="slideshow-card-description">
+                                            <h3 class="text-uppercase">Option 4</h3>
+                                            <hr>
+                                            <article>
+                                                Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                                Making this available globally through our secure platform wherever you need.
+                                            </article>
+                                            <button class="btn btn-primary-ghost text-uppercase">All Sumilators</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,14 +184,14 @@
     <!-- End Section: Introduction -->
 
     <!-- Section: About -->
-    <section id="about">
+    <section id="about" class="">
         <div class="container-fluid" style="max-width: 1440px;">
             <div class="row align-items-center" style="padding: 80px 0;">
                 <div id="" class="col-lg-7">
-                    <article id="article-about" class="bg-article-fade" data-aos="fade-left">
+                    <article id="article-about" class="bg-article-fade text-justify" data-aos="fade-left">
                         <h3 class="text-uppercase">About Iris</h3>
                         <h2 class="text-uppercase" style="color: #38BFD5; font-weight: 500; margin-bottom: 20px;">Who We Are</h2>
-                        <p style="max-width: 90%;">
+                        <p style="">
                             Intelligent Refueling Information System (IRIS), is the first aviation refueling
                             management system that has been elaborately developed by integrated the
                             management system with the safety information system for aircraft refueling
@@ -179,7 +207,7 @@
                     </article>
                 </div>
                 <div class="col-lg-5">
-                    <div style="background: black; width: 500px; height: 300px;" data-aos="fade-right"></div>
+                    <div style="background: black; width: 500px; height: 300px; max-width: 100%;" data-aos="fade-right"></div>
                 </div>
             </div>
         </div>
@@ -269,7 +297,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center" data-aos="fade-up">
-                    <button class="btn btn-primary text-uppercase font-weight-bold" style="width: 60%">Request a demo</button>
+                    <button class="btn btn-primary text-uppercase font-weight-bold btn-request-demo">Request a demo</button>
                 </div>
             </div>
         </div>
@@ -277,24 +305,23 @@
     <!-- End Section: Vision -->
 
     <!-- Section: Solution -->
-    <section id="solution">
+    <!-- TODO: ISSUE, WIDTH OVERFLOW -->
+    <section id="solution" class="">
         <div id="solution-bg-filter">
             <div class="container" style="min-height: 400px; padding: 100px 10px;">
-                <div style="margin-bottom: 220px;">
+                <div id="solution-head">
                     <h3 class="text-uppercase text-center" style="color: white;">Solution</h3>
                     <h1 class="text-uppercase text-center">Integrated Refueling Information System</h1>
                 </div>
 
-                <div class="row justify-content-between" style="
-                     background: url('assets/images/icon-iris-fusion.svg') no-repeat;
-                     background-size: auto 400px;
-                     background-position-x: center;
-                     background-position-y: 0px;
-                     min-height: 500px;
-                ">
-                    <div class="col-xl-5" style="margin-top: -120px;">
-                        <img class="solution-category-icon" src="assets/images/icon-solution-h-contact.svg" alt="Contract" style="margin-left: 100px;" onclick="toggleProductList(this, 'solution-contract-list')">
-                        <div id="solution-contract-list" class="product-list">
+                <div class="d-block d-xl-none text-center">
+                    <img src="assets/images/icon-iris-fusion.svg" style="max-width: 300px; margin: 20px;">
+                </div>
+
+                <div class="row justify-content-between" id="iris-solution">
+                    <div class="col-xl-5 cell-solution" id="contract-wrapper" style="">
+                        <img class="solution-category-icon solution-category-icon-left" src="assets/images/icon-solution-h-contact.svg" alt="Contract" style="" onclick="toggleProductList(this, 'solution-contract-list')">
+                        <div id="solution-contract-list" class="product-list" data-aos="fade-up">
                             <div class="d-flex flex-wrap justify-content-center">
                                 <div class="d-flex align-items-center solution-item">
                                     <div class="solution-item-cell cell-img">
@@ -331,9 +358,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5 text-right" style="margin-top: -120px;">
-                        <img class="solution-category-icon" src="assets/images/icon-solution-h-dispatch.svg" alt="Dispatch" style="margin-right: 100px;" onclick="toggleProductList(this, 'solution-dispatch-list')">
-                        <div id="solution-dispatch-list" class="product-list">
+                    <div class="col-xl-5 cell-solution text-right" id="dispatch-wrapper" style="">
+                        <img class="solution-category-icon solution-category-icon-right" src="assets/images/icon-solution-h-dispatch.svg" alt="Dispatch" style="" onclick="toggleProductList(this, 'solution-dispatch-list')">
+                        <div id="solution-dispatch-list" class="product-list" data-aos="fade-up">
                             <div class="d-flex flex-wrap justify-content-center">
                                 <div class="d-flex align-items-center solution-item" style="width: 165px;">
                                     <div class="solution-item-cell cell-img">
@@ -414,9 +441,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-5" style="margin-top: 120px;">
-                        <img class="solution-category-icon" src="assets/images/icon-solution-h-reconciliation.svg" alt="Reconciliation" style="margin-left: 100px;" onclick="toggleProductList(this, 'solution-reconciliation-list')">
-                        <div id="solution-reconciliation-list" class="product-list">
+                    <div class="col-xl-5 cell-solution" id="cell-reconciliation">
+                        <img class="solution-category-icon solution-category-icon-left" src="assets/images/icon-solution-h-reconciliation.svg" alt="Reconciliation" style="" onclick="toggleProductList(this, 'solution-reconciliation-list')">
+                        <div id="solution-reconciliation-list" class="product-list" data-aos="fade-up">
                             <div class="d-flex flex-wrap justify-content-center">
                                 <div class="d-flex align-items-center solution-item">
                                     <div class="solution-item-cell">
@@ -473,10 +500,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-7 text-right bordered" style="margin-top: 120px;">
-                        <img class="solution-category-icon" src="assets/images/icon-solution-h-refueling-service.svg" alt="Refueling Service" style="margin-right: 100px;" onclick="toggleProductList(this, 'solution-refueling-list')">
-                        <div id="solution-refueling-list" class="product-list">
-                            <div class="d-flex flex-wrap justify-content-end">
+                    <div class="col-xl-7 cell-solution text-right" id="cell-refueling" style="">
+                        <img class="solution-category-icon solution-category-icon-right" src="assets/images/icon-solution-h-refueling-service.svg" alt="Refueling Service" style="" onclick="toggleProductList(this, 'solution-refueling-list')">
+                        <div id="solution-refueling-list" class="product-list" data-aos="fade-up">
+                            <div class="d-flex flex-wrap">
                                 <div class="d-flex align-items-center solution-item">
                                     <div class="solution-item-cell cell-img">
                                         <img class="item-img" src="assets/images/solution-icons/icon-refueling-1.svg">
@@ -502,7 +529,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-wrap justify-content-end">
+                            <div class="d-flex flex-wrap">
                                 <div class="d-flex align-items-center solution-item">
                                     <div class="solution-item-cell cell-img">
                                         <img class="item-img" src="assets/images/solution-icons/icon-refueling-4.svg">
@@ -536,7 +563,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-wrap justify-content-end">
+                            <div class="d-flex flex-wrap">
                                 <div class="d-flex align-items-center solution-item">
                                     <div class="solution-item-cell cell-img">
                                         <img class="item-img" src="assets/images/solution-icons/icon-refueling-8.svg">
@@ -570,7 +597,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-wrap justify-content-end">
+                            <div class="d-flex flex-wrap">
                                 <div class="d-flex align-items-center solution-item">
                                     <div class="solution-item-cell cell-img">
                                         <img class="item-img" src="assets/images/solution-icons/icon-refueling-12.svg">
@@ -615,7 +642,7 @@
 
     <!-- Section: Equipment -->
     <section id="equipment">
-        <div id="equipment-bg-filter" style="padding-bottom: 200px;">
+        <div id="equipment-bg-filter" style="">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -710,7 +737,7 @@
                     </div>
                 </div>
                 <div class="row" style="margin-top: 30px;">
-                    <div class="col-3" data-aos="fade-up">
+                    <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up">
                         <article>
                             <h4 class="text-uppercase">Thai</h4>
                             <p>
@@ -721,7 +748,7 @@
                             </p>
                         </article>
                     </div>
-                    <div class="col-3" data-aos="fade-up">
+                    <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up">
                         <article>
                             <h4 class="text-uppercase">Canada</h4>
                             <p>
@@ -747,7 +774,7 @@
         <nav class="container">
             <div class="row">
                 <div class="col-lg-2">
-                    <div class="text-right">
+                    <div class="logo-img-footer-wrapper">
                         <img class="logo-img-footer" src="assets/images/iris_logo.svg"><br>
                     </div>
                 </div>

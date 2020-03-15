@@ -1,11 +1,45 @@
+// STATE
+let selectedCellIndex = 1;
+let previousCellIndex = 0;
 
 initialize();
+adjustOnResize();
 
 function initialize() {
     initializeCarousel();
     initializeAnimateOnScroll();
     initializeParallaxBackgrounds();
     initializeParallaxElements();
+}
+
+function getParallaxElementsConfig() {
+    if($(window).width() <= 1200) {
+        return {
+            direction: {
+                vision: 'horizontal'
+            }
+        }
+    } else {
+        return {
+            direction: {
+                vision: 'vertical'
+            }
+        }
+    }
+}
+
+function adjustOnResize() {
+    $(window).resize(() => {
+        adjustParallaxElements();
+    });
+}
+
+function adjustParallaxElements() {
+    initializeParallaxElements({
+        direction: {
+            vision: 'vertical'
+        }
+    })
 }
 
 function initializeCarousel() {
@@ -15,48 +49,84 @@ function initializeCarousel() {
         pageDots: false
     });
 
-    carousel.on( 'settle.flickity', function( event, index ) {
-        console.log( 'Flickity settled at ' + index );
-        const cells = $('.carousel').find('.carousel-cell');
+    carousel.on( 'select.flickity', function( event, index ) {
+        console.log( 'Flickity selected cell ' + index );
 
-        const previousIndex = index - 1;
-        const nextIndex = index + 1;
+        previousCellIndex = selectedCellIndex;
+        selectedCellIndex = index;
 
-        const previousCell = cells[previousIndex];
-        const currentCell = cells[index];
-        const nextCell = cells[nextIndex];
+        //const cells = $('.carousel').find('.carousel-cell');
 
-        if(previousIndex >= 0) {
-            deactivateSlideshowCell(previousCell);
-            carousel.flickity('resize');
+        const previous = index - 1;
+        const next = index + 1;
+
+        //const previousCell = cells[previousIndex];
+        //const currentCell = cells[index];
+        //const nextCell = cells[nextIndex];
+
+        if(previous >= 0) {
+            deactivateCarouselCell(getCell(previous));
+            //carousel.flickity('reposition');
         }
 
-        if(nextIndex < cells.length) {
-            deactivateSlideshowCell(nextCell);
-            carousel.flickity('resize');
+        if(next < getCells().length) {
+            deactivateCarouselCell(getCell(next));
+            //carousel.flickity('reposition');
         }
 
-        activateSlideshowCell(currentCell);
-        carousel.flickity('resize');
+        if(selectedCellIndex - previousCellIndex > 0) {
+            showCell(getCell(next));
+            hideCell(getCell(previous - 1))
+        } else if (selectedCellIndex - previousCellIndex < 0) {
+            showCell(getCell(previous));
+            hideCell(getCell(next + 1))
+        }
+
+        activateCarouselCell(getCell(index));
+        //carousel.flickity('reposition');
     });
+
+    carousel.on('change.flickity', function(event, index) {
+        console.log('changing');
+    })
 }
 
-function activateSlideshowCell(cell) {
+function getCells() {
+    return $('.carousel').find('.carousel-cell');
+}
+
+function getCell(index) {
+    return getCells()[index];
+}
+
+function showCell(cell) {
+    $(cell).removeClass('d-none').addClass('d-block')
+}
+
+function hideCell(cell) {
+    $(cell).removeClass('d-block').addClass('d-none')
+}
+
+function activateCarouselCell(cell) {
     $(cell)
         .find('.cell-content-inactive')
         .removeClass('d-block')
         .addClass('d-none');
+        //.css('height', '0')
+        //.css('margin-top', '0')
+        //.css('opacity', '0');
 
     $(cell)
         .find('.cell-content-active')
         .removeClass('d-none')
-        .addClass('d-block');
+        .addClass('d-block')
+        //.css('opacity', '1');
 
     $(cell).css('width', '700px');
     $(cell).css('z-index', '5');
 }
 
-function deactivateSlideshowCell(cell) {
+function deactivateCarouselCell(cell) {
     $(cell)
         .find('.cell-content-inactive')
         .removeClass('d-none')
@@ -84,13 +154,23 @@ function initializeParallaxBackgrounds() {
 }
 
 function initializeParallaxElements() {
-    $("#featured-text-wrapper").paroller({ factor: -0.3, type: 'foreground', direction: 'vertical' });
-    $("#slideshow-wrapper").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
-    $("#article-about").paroller({ factor: 0.2, type: 'foreground', direction: 'vertical' });
+    $("#featured-text-wrapper").paroller({factor: -0.3, type: 'foreground', direction: 'vertical'});
+    $("#slideshow-wrapper").paroller({factor: -0.1, type: 'foreground', direction: 'vertical'});
 
-    $(".card-vision#icon-1").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
-    $(".card-vision#icon-2").paroller({ factor: 0.15, type: 'foreground', direction: 'vertical' });
-    $(".card-vision#icon-3").paroller({ factor: -0.1, type: 'foreground', direction: 'vertical' });
+    if($(window).width() <= 1200) {
+        //$("#article-about").paroller({ factor: 0.2, type: 'foreground', direction: 'vertical' });
+
+        $(".card-vision#icon-1").paroller({factor: 0, type: 'foreground', direction: 'vertical'});
+        $(".card-vision#icon-2").paroller({factor: 0, type: 'foreground', direction: 'vertical'});
+        $(".card-vision#icon-3").paroller({factor: 0, type: 'foreground', direction: 'vertical'});
+    }
+    else {
+        //$("#article-about").paroller({ factor: 0.2, type: 'foreground', direction: 'vertical' });
+
+        $(".card-vision#icon-1").paroller({factor: -0.1, type: 'foreground', direction: 'vertical'});
+        $(".card-vision#icon-2").paroller({factor: 0.15, type: 'foreground', direction: 'vertical'});
+        $(".card-vision#icon-3").paroller({factor: -0.1, type: 'foreground', direction: 'vertical'});
+    }
 }
 
 function toggleProductList(icon, listId) {
