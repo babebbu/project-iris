@@ -1,107 +1,122 @@
-class Carousel {
+class Cell {
 
-    constructor() {
-        const INITIAL_INDEX = 1;
-        this.currentIndex = INITIAL_INDEX;
-        this.flickity = new Flickity('.carousel', {
-            initialIndex: INITIAL_INDEX,
-            pageDots: false,
-        });
-        this.flickity.on('change', (index) => {
-            this.currentIndex = index;
-            let cell = $('.carousel').find('.carousel-cell')[index];
-            let contentWrapper = $(cell).children('.content-wrapper');
-            this.deactivateContentWrapper();
-            this.activateContentWrapper(contentWrapper);
-            //this.hideOverflow();
-        })
+    cell;
+    slide;
+    wrapper = {
+        image: null,
+        description: null
+    };
+    index;
+
+    static counter = 0;
+
+    constructor(cell) {
+        this.cell = $(cell);
+        this.slide = this.cell.children('.slide');
+        this.wrapper.image = this.slide.find('.slideshow-card-image-wrapper');
+        this.wrapper.description = this.slide.find('.slideshow-card-description-wrapper');
+        this.index = Cell.counter++;
     }
 
-    activateContentWrapper(contentWrapper) {
-
-        console.debug(contentWrapper.html());
-
-        contentWrapper.addClass('active');
-
-        contentWrapper.find('.cell-content-inactive')
-            .removeClass('d-block')
-            .addClass('d-none');
-
-        contentWrapper.find('.cell-content-active')
-            .removeClass('d-none')
-            .addClass('d-block')
-
+    activate() {
+        this.slide.removeClass('inactive').addClass('active');
+        this.wrapper.image.removeClass('col-12').addClass('col-8');
+        this.wrapper.description.css('opacity', '0');
+        setTimeout(() => {
+            this.wrapper.description.removeClass('col-12').addClass('col-4').addClass('active');
+            this.wrapper.description.css('opacity', '1');
+            this.wrapper.description.find('h3').addClass('active');
+        }, 300);
     }
 
-    deactivateContentWrapper() {
-        for(let i = 0; i < this.getCells().length; i++) {
-            let cell = $(this.getCell(i));
-            let wrapper = cell.children('.content-wrapper');
+    deactivate() {
+        this.wrapper.description.css('opacity', '0');
+        this.slide.removeClass('active').addClass('inactive');
+        this.wrapper.image.removeClass('col-8').addClass('col-12');
+        setTimeout(() => {
+            this.wrapper.description.removeClass('col-4').addClass('col-12').removeClass('active');
+            this.wrapper.description.css('opacity', '1');
+            this.wrapper.description.find('h3').removeClass('active');
+        }, 300);
 
-            $('.content-wrapper').removeClass('active');
+        if (this.isLeftHandSide()) {
+            this.slide.removeClass('right').addClass('left');
+        } else if (this.isRightHandSide()) {
+            this.slide.removeClass('left').addClass('right');
+        } else {
+            this.slide.removeClass('left').removeClass('right');
+        }
 
-            cell.find('.cell-content-inactive')
-                .removeClass('d-none')
-                .addClass('d-block')
-                .css('width', '350px');
-
-            cell.find('.cell-content-active')
-                .removeClass('d-block')
-                .addClass('d-none');
-
-            //console.debug(`currentIndex = ${this.currentIndex}, i = ${i}, diff = ${this.currentIndex - i}`);
-
-            if(this.isLeftHandSide(i)) {
-                cell.find('.cell-content-inactive').css('margin-left', 'auto');
-                cell.find('.cell-content-inactive').css('margin-right', '-45px');
-            }
-            else if(this.isRightHandSide(i)) {
-                cell.find('.cell-content-inactive').css('margin-left', '-45px');
-                cell.find('.cell-content-inactive').css('margin-right', 'auto');
-            }
-
-            if(this.isOverflow(i)) {
-                cell.css('opacity', '0');
-            }
-            else {
-                cell.css('opacity', '1');
-            }
-
+        if(this.isOverflow()) {
+            this.cell.css('opacity', '0');
+        } else {
+            this.cell.css('opacity', '1');
         }
     }
 
-    hideOverflow() {
-        console.debug(`currentCell = ${this.currentIndex}`)
+    isLeftHandSide() {
+        return this.getCarouselIndexDifference() > 0;
     }
 
-    getCell(index) {
-        return this.getCells()[index];
-    }
-
-    getCells() {
-        return $('.carousel').find('.carousel-cell');
-    }
-
-    getIndexDifference(index) {
-        return this.currentIndex - index;
-    }
-
-    isLeftHandSide(index) {
-        return this.getIndexDifference(index) > 0;
-    }
-
-    isRightHandSide(index) {
-        return this.getIndexDifference(index) < 0;
+    isRightHandSide() {
+        return this.getCarouselIndexDifference() < 0;
     }
 
     isOverflow(index) {
-        return this.getIndexDifference(index) < -1 || this.getIndexDifference(index) > 1
+        return this.getCarouselIndexDifference() < -1 || this.getCarouselIndexDifference() > 1;
+    }
+
+    getCarouselIndexDifference() {
+        return Carousel.getIndexDifference(this.index);
+    }
+}
+
+class Carousel {
+
+    INITIAL_INDEX = 1;
+
+    carousel = new Flickity('.carousel', {
+        initialIndex: this.INITIAL_INDEX,
+        pageDots: false
+    });
+
+    cells = [];
+    static currentIndex;
+
+    constructor() {
+        this.setCurrentIndex(this.INITIAL_INDEX);
+        this.setCells();
+        this.bindCarouselEvents();
+    }
+
+    setCurrentIndex(index) {
+        Carousel.currentIndex = index;
+    }
+
+    setCells() {
+        $('.carousel').find('.carousel-cell').toArray().forEach(carouselCell => {
+            this.cells.push(new Cell(carouselCell));
+        });
+    }
+
+    bindCarouselEvents() {
+        this.carousel.on('change', (index) => {
+            Carousel.currentIndex = index;
+            this.cells.forEach(cell => cell.deactivate());
+            this.cells[index].activate();
+        });
+    }
+
+    static getIndexDifference(index) {
+        return Carousel.currentIndex - index;
     }
 }
 
 // STATE
 let selectedCellIndex = 1;
 let previousCellIndex = 0;
+
+let carousel = null;
 
 initialize();
 adjustOnResize();
@@ -144,7 +159,7 @@ function adjustParallaxElements() {
 }
 
 function initializeCarousel() {
-    new Carousel();
+    carousel = new Carousel();
 }
 
 function initializeAnimateOnScroll() {

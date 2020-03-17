@@ -191,15 +191,74 @@ section#intro #intro-text-speciality {
     margin-bottom: 12px;
 }
 
-.cell-content-inactive {
-    position: relative;
-    margin-top: 50px;
-    transition: opacity 0.5s ease;
+.slide {
+    width: 350px;
+    transition: width 0.5s ease;
+    padding: 0;
 }
 
-.cell-content-active {
-    transition: opacity 0.5s ease;
+.slide.active {
+    width: 675px;
 }
+
+.slide.inactive {
+    margin-top: 45px;
+}
+
+.slideshow-card-description-wrapper hr,
+.slideshow-card-description-wrapper article,
+.slideshow-card-description-wrapper button {
+    display: none;
+}
+
+.slideshow-card-description-wrapper.active hr,
+.slideshow-card-description-wrapper.active article,
+.slideshow-card-description-wrapper.active button {
+    display: block;
+}
+
+.slideshow-card-description-wrapper h3 {
+    color: white;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.slideshow-card-description-wrapper.active h3.active {
+    color: #38BFD5;
+    text-align: left;
+}
+
+.slide.inactive .slideshow-card-image {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.slide.inactive .slideshow-card-description-wrapper {
+    padding-right: 0px !important;
+    margin-top: -40px;
+}
+
+.slide.left {
+    margin-left: auto;
+    margin-right: -43px;
+}
+
+.slide.right {
+    margin-left: -43px;
+    margin-right: auto;
+}
+
+.carousel-cell {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.slideshow-card-description-wrapper {
+    transition: opacity 0.2s ease;
+}
+
 /*
 .carousel {
 }
