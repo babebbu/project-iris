@@ -1,3 +1,21 @@
+/**
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * !!!!                                                             !!!!
+ * !!!!  DO NOT TOUCH ANY LINES OF CLASS 'CELL' AND 'CAROUSEL'      !!!!
+ * !!!!  IF YOU ARE NOT SURE OF WHAT ARE YOU GOING TO DO.           !!!!
+ * !!!!  WHILE I WROTE, ONLY GOD AND I KNOW,                        !!!!
+ * !!!!  NOW, ONLY GOD KNOWS.                                       !!!!
+ * !!!!                                                             !!!!
+ * !!!!  GOD BLESS YOU.                                             !!!!
+ * !!!!                                                             !!!!
+ * !!!!  PLEASE ALSO INCREASE THE TIME YOU HAVE WASTED ON EDITING.  !!!!
+ * !!!!  TOTAL_HOURS_WASTED = 12                                    !!!!
+ * !!!!                                                             !!!!
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
+
 class Cell {
 
     cell;
@@ -39,19 +57,17 @@ class Cell {
             this.wrapper.description.find('h3').removeClass('active');
         }, 300);
 
-        if (this.isLeftHandSide()) {
+        if (this.isLeftHandSide())
             this.slide.removeClass('right').addClass('left');
-        } else if (this.isRightHandSide()) {
+        else if (this.isRightHandSide())
             this.slide.removeClass('left').addClass('right');
-        } else {
+        else
             this.slide.removeClass('left').removeClass('right');
-        }
 
-        if(this.isOverflow()) {
+        if (this.isOverflow())
             this.cell.css('opacity', '0');
-        } else {
+        else
             this.cell.css('opacity', '1');
-        }
     }
 
     isLeftHandSide() {
@@ -112,11 +128,19 @@ class Carousel {
     }
 }
 
+/**
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * !!!!                                                             !!!!
+ * !!!!                         FINE TUNING                         !!!!
+ * !!!!                                                             !!!!
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ */
+
 // STATE
 let selectedCellIndex = 1;
 let previousCellIndex = 0;
-
-let carousel = null;
 
 initialize();
 adjustOnResize();
@@ -159,7 +183,7 @@ function adjustParallaxElements() {
 }
 
 function initializeCarousel() {
-    carousel = new Carousel();
+    new Carousel();
 }
 
 function initializeAnimateOnScroll() {
