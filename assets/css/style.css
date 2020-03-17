@@ -241,7 +241,7 @@ section#intro #intro-text-speciality {
     color: white;
 
     opacity: 1;
-    transition: opacity 0s ease;
+    transition: opacity 0.5s ease;
     z-index: 1;
 }
 
@@ -257,6 +257,10 @@ section#intro #intro-text-speciality {
 
 .content-wrapper.active {
 
+}
+
+.cell-content-active {
+    position: relative;
 }
 
 .cell-content-inactive {
