@@ -162,6 +162,7 @@ section#intro #intro-text-speciality {
     font-weight: 400;
 }
 
+/*
 .slideshow-card-image {
     box-shadow: 0 0 20px #333;
     margin: 20px;
@@ -258,6 +259,7 @@ section#intro #intro-text-speciality {
 .slideshow-card-description-wrapper {
     transition: opacity 0.2s ease;
 }
+*/
 
 /*
 .carousel {
@@ -287,16 +289,29 @@ section#intro #intro-text-speciality {
 }
 */
 
-.carousel {
 
+
+/**
+ * Carousel Config
+ */
+
+.carousel {
+    height: 390px;
 }
 
+.carousel .flickity-viewport {
+    height: 390px !important;
+}
+
+/**
+ * Inactive Carousel Cells
+ */
+
 .carousel-cell {
-    width: 700px;
+    width: 675px;
     margin-right: 10px;
     border-radius: 5px;
 
-    line-height: 200px;
     color: white;
 
     opacity: 1;
@@ -304,26 +319,134 @@ section#intro #intro-text-speciality {
     z-index: 1;
 }
 
+.slide {
+    margin-top: 40px;
+    position: relative;
+    width: 350px;
+    height: 300px;
+    transition: width 0.5s linear;
+}
+
+.slide.left {
+    margin-left: auto;
+    margin-right: -30px;
+}
+
+.slide.right {
+    margin-left: -30px;
+    margin-right: auto;
+}
+
+.slide-image-wrapper {
+    width: 350px;
+    position: absolute;
+    transition: all 0.5s linear;
+}
+
+.slide.left .slide-image-wrapper {
+    right: 0 !important;
+}
+
+.slide-right .slide-image-wrapper {
+    left: 0 !important;
+}
+
+.slide-image {
+    width: 100%;
+    box-shadow: 0 0 20px #333;
+}
+
+.slide-description-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    transition: all 0.5s linear;
+}
+
+.slide-description {
+    background: #005582;
+    box-shadow: 0 0 30px #333;
+    color: white;
+    font-weight: 300;
+    line-height: 1.6rem;
+    height: 80px;
+    transition: all 0.5s linear;
+}
+
+.slide-description h3 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.slide-description hr {
+    display: none;
+}
+
+.slide-description article {
+    display: none;
+}
+
+.slide-description button {
+    display: none;
+}
+
+/**
+ * Active Carousel Cell
+ */
+
 .carousel-cell.is-selected {
     z-index: 99;
 }
 
-.content-wrapper {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.carousel-cell.is-selected .slide {
+    width: 675px;
+    height: 390px;
+    margin-top: 0;
 }
 
-.content-wrapper.active {
-
+.carousel-cell.is-selected .slide-image-wrapper {
+    left: 0;
+    width: 450px;
 }
 
-.cell-content-active {
-    position: relative;
+.carousel-cell.is-selected .slide-image {
+    margin: 20px;
 }
 
-.cell-content-inactive {
-    position: relative;
+.carousel-cell.is-selected .slide-description-wrapper {
+    width: 225px;
+    padding-right: 20px;
+}
+.carousel-cell.is-selected .slide-description {
+    background: #005582;
+    box-shadow: 0 0 30px #333;
+    color: white;
+    font-weight: 300;
+    padding: 20px !important;
+    line-height: 1.6rem;
+    height: 386px;
+}
+
+.carousel-cell.is-selected .slide-description h3 {
+    text-align: left;
+    padding-top: 0;
+}
+
+.carousel-cell.is-selected .slide-description hr {
+    display: block;
+    border-top: 2px solid white;
+    width: 60%;
+    margin-left: 0;;
+}
+
+.carousel-cell.is-selected .slide-description article {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.carousel-cell.is-selected .slide-description button {
+    display: block;
 }
 
 /**

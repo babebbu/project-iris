@@ -16,6 +16,7 @@
  * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
  */
 
+/*
 class Cell {
 
     cell;
@@ -103,6 +104,109 @@ class Carousel {
         this.setCurrentIndex(this.INITIAL_INDEX);
         this.setCells();
         this.bindCarouselEvents();
+    }
+
+    setCurrentIndex(index) {
+        Carousel.currentIndex = index;
+    }
+
+    setCells() {
+        $('.carousel').find('.carousel-cell').toArray().forEach(carouselCell => {
+            this.cells.push(new Cell(carouselCell));
+        });
+    }
+
+    bindCarouselEvents() {
+        this.carousel.on('change', (index) => {
+            Carousel.currentIndex = index;
+            this.cells.forEach(cell => cell.deactivate());
+            this.cells[index].activate();
+        });
+    }
+
+    static getIndexDifference(index) {
+        return Carousel.currentIndex - index;
+    }
+}
+
+*/
+
+class Cell {
+
+    cell;
+    slide;
+    wrapper = {
+        image: null,
+        description: null
+    };
+    index;
+
+    static counter = 0;
+
+    constructor(cell) {
+        this.cell = $(cell);
+        this.slide = this.cell.children('.slide');
+        this.wrapper.image = this.slide.find('.slide-image-wrapper');
+        this.wrapper.description = this.slide.find('.slide-description-wrapper');
+        this.index = Cell.counter++;
+    }
+
+    activate() {
+        // set width of slide
+    }
+
+    deactivate() {
+
+        // set width of slide
+
+        if (this.isLeftHandSide()) {
+            this.slide.removeClass('right').addClass('left');
+        } else if (this.isRightHandSide()) {
+            this.slide.removeClass('left').addClass('right');
+        } else {
+            this.slide.removeClass('left').removeClass('right');
+        }
+
+        if(this.isOverflow()) {
+            this.cell.css('opacity', '0');
+        } else {
+            this.cell.css('opacity', '1');
+        }
+    }
+
+    isLeftHandSide() {
+        return this.getCarouselIndexDifference() > 0;
+    }
+
+    isRightHandSide() {
+        return this.getCarouselIndexDifference() < 0;
+    }
+
+    isOverflow(index) {
+        return this.getCarouselIndexDifference() < -1 || this.getCarouselIndexDifference() > 1;
+    }
+
+    getCarouselIndexDifference() {
+        return Carousel.getIndexDifference(this.index);
+    }
+}
+
+class Carousel {
+
+    INITIAL_INDEX = 1;
+
+    carousel = new Flickity('.carousel', {
+        initialIndex: this.INITIAL_INDEX,
+        pageDots: false
+    });
+
+    cells = [];
+    static currentIndex;
+
+    constructor() {
+        this.setCurrentIndex(this.INITIAL_INDEX);
+        this.setCells();
+        this.bindCarouselEvents()
     }
 
     setCurrentIndex(index) {
