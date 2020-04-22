@@ -1,138 +1,5 @@
 'use strict';
 
-/**
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * !!!!                                                             !!!!
- * !!!!  DO NOT TOUCH ANY LINES OF CLASS 'CELL' AND 'CAROUSEL'      !!!!
- * !!!!  IF YOU ARE NOT SURE OF WHAT ARE YOU GOING TO DO.           !!!!
- * !!!!  WHILE I WROTE, ONLY GOD AND I KNOW,                        !!!!
- * !!!!  NOW, ONLY GOD KNOWS.                                       !!!!
- * !!!!                                                             !!!!
- * !!!!  GOD BLESS YOU.                                             !!!!
- * !!!!                                                             !!!!
- * !!!!  PLEASE ALSO INCREASE THE TIME YOU HAVE WASTED ON EDITING.  !!!!
- * !!!!  TOTAL_HOURS_WASTED = 12                                    !!!!
- * !!!!                                                             !!!!
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- */
-
-/*
-class Cell {
-
-    cell;
-    slide;
-    wrapper = {
-        image: null,
-        description: null
-    };
-    index;
-
-    static counter = 0;
-
-    constructor(cell) {
-        this.cell = $(cell);
-        this.slide = this.cell.children('.slide');
-        this.wrapper.image = this.slide.find('.slideshow-card-image-wrapper');
-        this.wrapper.description = this.slide.find('.slideshow-card-description-wrapper');
-        this.index = Cell.counter++;
-    }
-
-    activate() {
-        this.slide.removeClass('inactive').addClass('active');
-        this.wrapper.image.removeClass('col-12').addClass('col-8');
-        this.wrapper.description.css('opacity', '0');
-        setTimeout(() => {
-            this.wrapper.description.removeClass('col-12').addClass('col-4').addClass('active');
-            this.wrapper.description.css('opacity', '1');
-            this.wrapper.description.find('h3').addClass('active');
-        }, 300);
-    }
-
-    deactivate() {
-        this.wrapper.description.css('opacity', '0');
-        this.slide.removeClass('active').addClass('inactive');
-        this.wrapper.image.removeClass('col-8').addClass('col-12');
-        setTimeout(() => {
-            this.wrapper.description.removeClass('col-4').addClass('col-12').removeClass('active');
-            this.wrapper.description.css('opacity', '1');
-            this.wrapper.description.find('h3').removeClass('active');
-        }, 300);
-
-        if (this.isLeftHandSide())
-            this.slide.removeClass('right').addClass('left');
-        else if (this.isRightHandSide())
-            this.slide.removeClass('left').addClass('right');
-        else
-            this.slide.removeClass('left').removeClass('right');
-
-        if (this.isOverflow())
-            this.cell.css('opacity', '0');
-        else
-            this.cell.css('opacity', '1');
-    }
-
-    isLeftHandSide() {
-        return this.getCarouselIndexDifference() > 0;
-    }
-
-    isRightHandSide() {
-        return this.getCarouselIndexDifference() < 0;
-    }
-
-    isOverflow(index) {
-        return this.getCarouselIndexDifference() < -1 || this.getCarouselIndexDifference() > 1;
-    }
-
-    getCarouselIndexDifference() {
-        return Carousel.getIndexDifference(this.index);
-    }
-}
-
-class Carousel {
-
-    INITIAL_INDEX = 1;
-
-    carousel = new Flickity('.carousel', {
-        initialIndex: this.INITIAL_INDEX,
-        pageDots: false
-    });
-
-    cells = [];
-    static currentIndex;
-
-    constructor() {
-        this.setCurrentIndex(this.INITIAL_INDEX);
-        this.setCells();
-        this.bindCarouselEvents();
-    }
-
-    setCurrentIndex(index) {
-        Carousel.currentIndex = index;
-    }
-
-    setCells() {
-        $('.carousel').find('.carousel-cell').toArray().forEach(carouselCell => {
-            this.cells.push(new Cell(carouselCell));
-        });
-    }
-
-    bindCarouselEvents() {
-        this.carousel.on('change', (index) => {
-            Carousel.currentIndex = index;
-            this.cells.forEach(cell => cell.deactivate());
-            this.cells[index].activate();
-        });
-    }
-
-    static getIndexDifference(index) {
-        return Carousel.currentIndex - index;
-    }
-}
-
-*/
-
 class Cell {
 
     cell;
@@ -194,15 +61,19 @@ class Carousel {
 
     INITIAL_INDEX = 1;
 
-    carousel = new Flickity('.carousel', {
-        initialIndex: this.INITIAL_INDEX,
-        pageDots: false
-    });
+    carousel;
 
     cells = [];
     static currentIndex;
 
-    constructor() {
+    constructor(selector, wrapAround) {
+
+        this.carousel = new Flickity(selector, {
+            initialIndex: this.INITIAL_INDEX,
+            pageDots: false,
+            wrapAround: wrapAround
+        });
+
         this.setCurrentIndex(this.INITIAL_INDEX);
         this.setCells();
         this.bindCarouselEvents()
@@ -250,14 +121,60 @@ let isCardVisionSmallInitialized = false;
 let cardVisionParollerDirection;
 
 initialize();
-//adjustOnResize();
+adjustOnResize();
 
 function initialize() {
-    //initializeCarousel();
+    smoothScroll();
+    initializeCarousel();
     initializeAnimateOnScroll();
-    //initializeParallaxBackgrounds();
-    //initializeParallaxElements();
+    initializeParallaxBackgrounds();
+    initializeParallaxElements();
 
+    window.onscroll = function() {scrollFunction()};
+}
+
+let hamburgerActive = false;
+let hamburgerMenuHeight = '275px';
+const startPosition = 150;
+let onScroll = false;
+
+function scrollFunction() {
+    if (document.body.scrollTop > startPosition || document.documentElement.scrollTop > startPosition) {
+        hamburgerActive = true;
+        onScroll = true;
+        toggleHamburgerMenu(true);
+        $("#main-navigation").addClass('scroll').addClass('bg-dark-transparent');
+    } else {
+        onScroll = false;
+        $("#main-navigation").removeClass('scroll').removeClass('bg-dark-transparent');
+    }
+}
+
+function toggleHamburgerMenu(expected) {
+    if (hamburgerActive) {
+        hamburgerActive = false;
+        if (!onScroll) {
+            $("#main-navigation").removeClass('bg-dark-transparent');
+        }
+        $('#hamburger').css('margin-top', '-'+hamburgerMenuHeight);
+    } else if (expected || hamburgerActive === false) {
+        hamburgerActive = true;
+        $("#main-navigation").addClass('bg-dark-transparent');
+        $('#hamburger').css('margin-top', '0px');
+    }
+}
+
+function smoothScroll() {
+    $('a[href*="#"]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate(
+            {
+                scrollTop: $($(this).attr('href')).offset().top - 69,
+            },
+            500,
+            'linear'
+        );
+    });
 }
 
 function adjustOnResize() {
@@ -281,7 +198,8 @@ function adjustOnResize() {
 }
 
 function initializeCarousel() {
-    //new Carousel();
+    new Carousel('.carousel', false);
+    new Carousel('.carousel-vertical', true);
 }
 
 function initializeAnimateOnScroll() {
@@ -300,13 +218,6 @@ function initializeParallaxElements() {
 
     let width = $(window).width();
 
-    $("#featured-text-wrapper").paroller({factor: -0.3, type: 'foreground', direction: 'vertical'});
-    $("#slideshow-wrapper").paroller({factor: -0.1, type: 'foreground', direction: 'vertical'});
-
-        //$("#article-about").paroller({ factor: 0.2, type: 'foreground', direction: 'vertical' });
-
-    //if ($(window).width() <= 768) {
-    //} else {
     if (width <= 768) {
         isCardVisionSmallInitialized = true;
         $(".card-vision#icon-1-sm").paroller({factor: -0.0, type: 'foreground', direction: 'horizontal'});
@@ -319,9 +230,6 @@ function initializeParallaxElements() {
         $(".card-vision#icon-2").paroller({factor: 0.15, type: 'foreground', direction: 'vertical'});
         $(".card-vision#icon-3").paroller({factor: -0.1, type: 'foreground', direction: 'vertical'});
     }
-    //}
-
-        //$("#article-about").paroller({ factor: 0.2, type: 'foreground', direction: 'vertical' });
 }
 
 function toggleProductList(icon, listId) {
@@ -334,5 +242,15 @@ function toggleProductList(icon, listId) {
     if(state === '1') {
         $(icon).removeClass('active');
         element.css('opacity', 0);
+    }
+}
+
+function toggleHamburgerScroll() {
+    if (hamburgerActive) {
+        hamburgerActive = false;
+        document.getElementById("main-navigation-scroll").style.top = "-284px";
+    } else {
+        hamburgerActive = true;
+        document.getElementById("main-navigation-scroll").style.top = "0px";
     }
 }

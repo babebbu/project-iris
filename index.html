@@ -1,818 +1,974 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Title -->
-    <title>IRIS</title>
+    <head>
+        <!-- Title -->
+        <title>IRIS</title>
 
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+        <!-- Meta -->
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
 
-    <!-- Open Graph -->
+        <!-- Open Graph -->
 
-    <!-- View Port -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <!-- View Port -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- Included Styles -->
-    <link rel="stylesheet" media="all" href="dists/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" media="screen" href="dists/aos/css/aos.css" />
-    <link rel="stylesheet" media="screen" href="dists/flickity/css/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+        <!-- Included Styles -->
+        <link rel="stylesheet" media="all" href="dists/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="dists/aos/css/aos.css" />
+        <link rel="stylesheet" media="screen" href="dists/flickity/css/flickity.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
 
-    <!-- Custom Style -->
-    <link rel="stylesheet" media="all" href="assets/css/style.css">
-</head>
-<body>
+        <!-- Custom Style -->
+        <link rel="stylesheet" media="all" href="assets/css/style.css">
+    </head>
+    <body style="transition: padding-top 0.3s ease;">
 
-    <!-- Main Navigation -->
-    <header id="main-navigation" class="container-fluid">
-        <div class="row">
-            <div class="col-auto">
-                <div class="container-fluid p-0">
-                    <div class="row align-items-center no-gutters">
-                        <div class="col-auto">
-                            <img id="logo" src="assets/images/iris_logo.svg" alt="IRIS Logo">
-                        </div>
-                        <div class="col-auto">
-                            <!--<span id="text-logo">IRIS</span>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="col text-right d-none d-lg-block">
-                <ul id="main-navigation-page-list">
-                    <li><a href="">Introduction</a></li>
-                    <li><a href="">About Iris</a></li>
-                    <li><a href="">Vision</a></li>
-                    <li><a href="">Solution</a></li>
-                    <li><a href="">Equipment</a></li>
-                    <li><a href="">Contact Iris</a></li>
+        <!-- Main Navigation -->
+
+        <header id="main-navigation" class="container-fluid" style="">
+
+            <nav id="hamburger" class="col text-center">
+                <ul class="main-navigation-page-list" style="padding-left: 0;">
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#about">About Iris</a></li>
+                    <li><a href="#vision">Vision</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#contact">Contact Iris</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <!-- End Main Navigation -->
 
-    <!-- Section: Introduction -->
-    <section id="intro" class="container-fluid">
-        <div id="intro-content" class="row align-items-center">
-            <div id="featured-text-wrapper" class="col-12 text-center text-uppercase" data-aos="fade-down">
-                <span id="intro-text-speciality" style="color: #38BFD5">We specialise in</span>
-                <h1 style="color: white">Aviation Refueling System</h1>
-                <button id="btn-request-demo" class="btn btn-primary text-uppercase">Request a demo</button>
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <div class="container-fluid p-0">
+                        <div class="row align-items-center no-gutters">
+                            <div class="col-auto">
+                                <a href="#intro"><img class="logo" src="assets/images/iris_logo.svg" alt="IRIS Logo"></a>
+                            </div>
+                            <div class="col-auto">
+                                <!--<span id="text-logo">IRIS</span>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="col text-right d-none d-lg-block">
+                    <ul class="main-navigation-page-list">
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#about">About Iris</a></li>
+                        <li><a href="#vision">Vision</a></li>
+                        <li><a href="#solution">Solution</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#contact">Contact Iris</a></li>
+                    </ul>
+                </nav>
+                <nav class="col text-right d-block d-lg-none">
+                    <ul class="main-navigation-page-list" style="margin-right: -20px;">
+                        <li style="border: 1px solid white; background: rgba(255,255,255,0.2)">
+                            <a onclick="toggleHamburgerMenu()">Menu</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+        </header>
 
-            <div id="slideshow-wrapper" class="col-12">
-                <div class="carousel">
-
-                    <div class="carousel-cell">
-                        <div class="slide left">
-                            <div class="slide-image-wrapper">
-                                <img class="slide-image" src="assets/images/slides/slideshow-img-1.png">
-                            </div>
-                            <div class="slide-description-wrapper">
-                                <div class="slide-description">
-                                    <h3 class="text-uppercase">Option 1</h3>
-                                    <hr>
-                                    <article>
-                                        Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                        Making this available globally through our secure platform wherever you need.
-                                    </article>
-                                    <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="slide">
-                            <div class="slide-image-wrapper">
-                                <img class="slide-image" src="assets/images/slides/slideshow-img-1.png">
-                            </div>
-                            <div class="slide-description-wrapper">
-                                <div class="slide-description">
-                                    <h3 class="text-uppercase">Option 2</h3>
-                                    <hr>
-                                    <article>
-                                        Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                        Making this available globally through our secure platform wherever you need.
-                                    </article>
-                                    <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="slide right">
-                            <div class="slide-image-wrapper">
-                                <img class="slide-image" src="assets/images/slides/slideshow-img-1.png">
-                            </div>
-                            <div class="slide-description-wrapper">
-                                <div class="slide-description">
-                                    <h3 class="text-uppercase">Option 3</h3>
-                                    <hr>
-                                    <article>
-                                        Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                        Making this available globally through our secure platform wherever you need.
-                                    </article>
-                                    <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell">
-                        <div class="slide right">
-                            <div class="slide-image-wrapper">
-                                <img class="slide-image" src="assets/images/slides/slideshow-img-1.png">
-                            </div>
-                            <div class="slide-description-wrapper">
-                                <div class="slide-description">
-                                    <h3 class="text-uppercase">Option 4</h3>
-                                    <hr>
-                                    <article>
-                                        Capturing data from your operation, airports, airlines, and supply partners in real-time.
-                                        Making this available globally through our secure platform wherever you need.
-                                    </article>
-                                    <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Section: Introduction -->
-
-    <!-- Section: About -->
-    <section id="about" class="">
-        <div class="container-fluid" style="max-width: 1440px;">
-            <div class="row align-items-center" style="padding: 80px 0;">
-                <div id="" class="col-lg-7">
-                    <article id="article-about" class="bg-article-fade text-justify" data-aos="fade-left">
-                        <h3 class="text-uppercase">About Iris</h3>
-                        <h2 class="text-uppercase" style="color: #38BFD5; font-weight: 500; margin-bottom: 20px;">Who We Are</h2>
-                        <p style="">
-                            Intelligent Refueling Information System (IRIS), is the first aviation refueling
-                            management system that has been elaborately developed by integrated the
-                            management system with the safety information system for aircraft refueling
-                            services.<br>
-                            As a world leading in aviation refueling services, IRIS has succeeded in the
-                            development and designed for best experience of look and feel with user
-                            friendly for the best safety in operation. Besides, IRIS will significantly increase
-                            the performance of service especially the on-time performance and safety
-                            performance.<br>
-                            IRIS is highly flexible to support complex business process of the aviation
-                            refueling services around the world.
-                        </p>
-                    </article>
-                </div>
-                <div class="col-lg-5">
-                    <div style="background: black; width: 500px; height: 300px; max-width: 100%;" data-aos="fade-right"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Section: About -->
-
-    <!-- Section: Vision -->
-    <section id="vision">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <article id="text-vision">
-                        <h3 class="text-uppercase font-weight-light" style="color: initial;" data-aos="fade-right">Vision</h3>
-                        <h2 class="text-uppercase" data-aos="fade-right">Be a leader in aviation refueling system</h2>
-                        <p data-aos="fade-right">
-                            We provide the best platform to enable real-time integration across the complete global fuel supply chain incorporating all the activities and parties involved.
-                            Our mobile computing expertise and innovative design enables the removal of paper and manual entry through fully understanding the needs of each
-                            stakeholder, our platform is designed to help realise significant efficiencies and optimisation across your organisation.
-                        </p>
-                    </article>
-                </div>
-            </div>
-            <div class="row" style="margin: 70px 0;" data-aos="fade-in">
-                <div class="col-lg-4">
-                    <div class="card-vision" id="icon-1">
-                        <img src="assets/images/icon-vision-1.jpg">
-                        <div class="card-vision-hover">
-                            <div class="container-fluid" style="height: 100%;">
-                                <div class="row align-items-center" style="height: 100%;">
-                                    <div class="col-12">
-                                        <article class="align-items-center">
-                                            <h4 class="text-uppercase">Storing System</h4>
-                                            <p style="margin-top: 20px; margin-bottom: 0">
-                                                BAFS quality oil storage for
-                                                oil storage and forwarding to
-                                                the filling station.
-                                            </p>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card-vision" id="icon-2">
-                        <img src="assets/images/icon-vision-2.jpg">
-                        <div class="card-vision-hover">
-                            <div class="container-fluid" style="height: 100%;">
-                                <div class="row align-items-center" style="height: 100%;">
-                                    <div class="col-12">
-                                        <article class="align-items-center">
-                                            <h4 class="text-uppercase">Storing System</h4>
-                                            <p style="margin-top: 20px; margin-bottom: 0">
-                                                BAFS quality oil storage for
-                                                oil storage and forwarding to
-                                                the filling station.
-                                            </p>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card-vision" id="icon-3">
-                        <img src="assets/images/icon-vision-3.jpg">
-                        <div class="card-vision-hover">
-                            <div class="container-fluid" style="height: 100%;">
-                                <div class="row align-items-center" style="height: 100%;">
-                                    <div class="col-12">
-                                        <article class="align-items-center">
-                                            <h4 class="text-uppercase">Storing System</h4>
-                                            <p style="margin-top: 20px; margin-bottom: 0">
-                                                BAFS quality oil storage for
-                                                oil storage and forwarding to
-                                                the filling station.
-                                            </p>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!--<header id="main-navigation-scroll" class="container-fluid">
+            <div class="row hamburger-scroll">
+                <nav class="col text-right">
+                    <ul class="main-navigation-page-list" style="padding-left: 0;">
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#about">About Iris</a></li>
+                        <li><a href="#vision">Vision</a></li>
+                        <li><a href="#solution">Solution</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#contact">Contact Iris</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="row">
-                <div class="col-12 text-center" data-aos="fade-up">
-                    <button class="btn btn-primary text-uppercase font-weight-bold btn-request-demo">Request a demo</button>
+                <div class="col-auto">
+                    <div class="container-fluid p-0">
+                        <div class="row align-items-center no-gutters">
+                            <div class="col-auto">
+                                <img id="logo" src="assets/images/iris_logo.svg" alt="IRIS Logo" style="height: 80px; margin: 0px;">
+                            </div>
+                            <div class="col-auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="col text-right d-none d-lg-block">
+                    <ul class="main-navigation-page-list" style="margin-top: 18px;">
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#about">About Iris</a></li>
+                        <li><a href="#vision">Vision</a></li>
+                        <li><a href="#solution">Solution</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#contact">Contact Iris</a></li>
+                    </ul>
+                </nav>
+                <nav class="col text-right d-block d-lg-none" style="padding: 15px;">
+                    <ul class="main-navigation-page-list" style="margin-top: 0px; margin-right: -10px;">
+                        <li style="border: 1px solid white; background: rgba(255,255,255,0.2)"><a onclick="toggleHamburgerScroll()">Menu</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>-->
+        <!-- End Main Navigation -->
+
+        <!-- Section: Introduction -->
+        <section id="intro">
+
+            <div class="container-fluid">
+
+            <div id="intro-content" class="row align-items-center">
+                <div id="featured-text-wrapper" class="col-12 text-center text-uppercase" data-aos="fade-down">
+                    <span id="intro-text-speciality" style="color: #38BFD5">We specialize in</span>
+                    <h1 style="color: white">Aviation Refuelling System</h1>
+                    <a href="#contact" id="btn-request-demo" class="btn btn-primary text-uppercase">Show Case</a>
+                </div>
+
+                <div id="slideshow-wrapper" class="col-12">
+
+                    <div class="carousel d-none d-md-block">
+
+                        <div class="carousel-cell">
+                            <div class="slide left">
+                                <div class="slide-image-wrapper">
+                                    <img class="slide-image" src="assets/images/slides/featured-certified-equipment.jpg">
+                                </div>
+                                <div class="slide-description-wrapper">
+                                    <div class="slide-description">
+                                        <h3 class="text-uppercase">Certified Equipment</h3>
+                                        <hr>
+                                        <article>
+                                            Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                            Making this available globally through our secure platform wherever you need.
+                                        </article>
+                                        <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-cell">
+                            <div class="slide">
+                                <div class="slide-image-wrapper">
+                                    <img class="slide-image" src="assets/images/slides/slideshow-img-1.png">
+                                </div>
+                                <div class="slide-description-wrapper">
+                                    <div class="slide-description">
+                                        <h3 class="text-uppercase">Fuel Order</h3>
+                                        <hr>
+                                        <article>
+                                            Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                            Making this available globally through our secure platform wherever you need.
+                                        </article>
+                                        <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-cell">
+                            <div class="slide right">
+                                <div class="slide-image-wrapper">
+                                    <img class="slide-image" src="assets/images/slides/featured-closing-order.jpg">
+                                </div>
+                                <div class="slide-description-wrapper">
+                                    <div class="slide-description">
+                                        <h3 class="text-uppercase">Closing Order</h3>
+                                        <hr>
+                                        <article>
+                                            Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                            Making this available globally through our secure platform wherever you need.
+                                        </article>
+                                        <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-cell">
+                            <div class="slide right">
+                                <div class="slide-image-wrapper">
+                                    <img class="slide-image" src="assets/images/slides/slideshow-img-1.png">
+                                </div>
+                                <div class="slide-description-wrapper">
+                                    <div class="slide-description">
+                                        <h3 class="text-uppercase">Option 4</h3>
+                                        <hr>
+                                        <article>
+                                            Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                            Making this available globally through our secure platform wherever you need.
+                                        </article>
+                                        <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- End Carousel -->
+
+
+                    <div class="carousel-vertical d-md-none">
+                        <div class="carousel-cell" style="width: 330px;">
+                            <div class="carousel-vertical-image">
+                                <img style="width: 100%" src="assets/images/slides/featured-certified-equipment.jpg">
+                            </div>
+                            <div class="carousel-vertical-description text-center">
+                                <h3 class="text-uppercase">Option 4</h3>
+                                <hr>
+                                <article>
+                                    Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                    Making this available globally through our secure platform wherever you need.
+                                </article>
+                                <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                            </div>
+                        </div>
+                        <div class="carousel-cell" style="width: 330px;">
+                            <div class="carousel-vertical-image">
+                                <img style="width: 100%" src="assets/images/slides/slideshow-img-1.png">
+                            </div>
+                            <div class="carousel-vertical-description">
+                                <h3 class="text-uppercase">Option 4</h3>
+                                <hr>
+                                <article>
+                                    Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                    Making this available globally through our secure platform wherever you need.
+                                </article>
+                                <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                            </div>
+                        </div>
+                        <div class="carousel-cell" style="width: 330px;">
+                            <div class="carousel-vertical-image">
+                                <img style="width: 100%" src="assets/images/slides/featured-closing-order.jpg">
+                            </div>
+                            <div class="carousel-vertical-description">
+                                <h3 class="text-uppercase">Option 4</h3>
+                                <hr>
+                                <article>
+                                    Capturing data from your operation, airports, airlines, and supply partners in real-time.
+                                    Making this available globally through our secure platform wherever you need.
+                                </article>
+                                <button class="btn btn-primary-ghost text-uppercase">All Simulators</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End Section: Vision -->
-
-    <!-- Section: Solution -->
-    <!-- TODO: ISSUE, WIDTH OVERFLOW -->
-    <section id="solution" class="">
-        <div id="solution-bg-filter">
-            <div class="container" style="min-height: 400px; padding: 100px 10px;">
-                <div id="solution-head">
-                    <h3 class="text-uppercase text-center" style="color: white;">Solution</h3>
-                    <h1 class="text-uppercase text-center">Integrated Refueling Information System</h1>
-                </div>
-
-                <div class="d-block d-xl-none text-center">
-                    <img src="assets/images/icon-iris-fusion.svg" style="max-width: 300px; margin: 20px;">
-                </div>
-
-                <div class="row justify-content-between" id="iris-solution">
-                    <div class="col-xl-5 cell-solution" id="contract-wrapper" style="">
-                        <img class="solution-category-icon solution-category-icon-left" src="assets/images/icon-solution-h-contact.svg" alt="Contract" style="" onclick="toggleProductList(this, 'solution-contract-list')">
-                        <div id="solution-contract-list" class="product-list" data-aos="fade-up">
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-1.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Auto Portion Refueling<br>Management</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-2.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Auto Flight Schedule<br>Planning</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-3.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Resource Management</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 cell-solution text-right" id="dispatch-wrapper" style="">
-                        <img class="solution-category-icon solution-category-icon-right" src="assets/images/icon-solution-h-dispatch.svg" alt="Dispatch" style="" onclick="toggleProductList(this, 'solution-dispatch-list')">
-                        <div id="solution-dispatch-list" class="product-list" data-aos="fade-up">
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item" style="width: 165px;">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-1.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Info Plane<br>Operation Control</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item" style="width: 140px;">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-2.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Job Board</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item" style="width: 185px;">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-3.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Mobile Data Transfer Connectivity</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item" style="width: 165px;">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-4.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">All Flight Dispatch</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item" style="width: 140px;">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-5.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Interface with Pilot Device</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item" style="width: 185px;">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-6.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">GPS Location Tracking</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item" style="width: 165px;">
-                                    <div class="solution-item-cell cell-img">
-
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item" style="width: 140px;">
-                                    <div class="solution-item-cell cell-img">
-
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item" style="width: 185px;">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-dispatch-7.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">RFID<br>Clock-in/Clock-out</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 cell-solution" id="cell-reconciliation">
-                        <img class="solution-category-icon solution-category-icon-left" src="assets/images/icon-solution-h-reconciliation.svg" alt="Reconciliation" style="" onclick="toggleProductList(this, 'solution-reconciliation-list')">
-                        <div id="solution-reconciliation-list" class="product-list" data-aos="fade-up">
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-1.svg">
-                                    </div>
-                                    <div class="solution-item-cell">
-                                        <p class="item-text">Storage Management</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-2.svg">
-                                    </div>
-                                    <div class="solution-item-cell">
-                                        <p class="item-text">Flexible Daily Stock Closing</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-3.svg">
-                                    </div>
-                                    <div class="solution-item-cell">
-                                        <p class="item-text">DR Correction/Validation</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-4.svg">
-                                    </div>
-                                    <div class="solution-item-cell">
-                                        <p class="item-text">DR Customer Portal</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap justify-content-center">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-5.svg">
-                                    </div>
-                                    <div class="solution-item-cell">
-                                        <p class="item-text">Sale Summary Dashboard</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-6.svg">
-                                    </div>
-                                    <div class="solution-item-cell">
-                                        <p class="item-text">Reporting</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 cell-solution text-right" id="cell-refueling" style="">
-                        <img class="solution-category-icon solution-category-icon-right" src="assets/images/icon-solution-h-refueling-service.svg" alt="Refueling Service" style="" onclick="toggleProductList(this, 'solution-refueling-list')">
-                        <div id="solution-refueling-list" class="product-list" data-aos="fade-up">
-                            <div class="d-flex flex-wrap">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-1.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Vehicle Daily Inspection</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-2.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Digital Register Integration</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-3.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Transaction Logging</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-4.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Electronic Delivery Receipt (DR)/Signature</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-5.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Power Take Off Detection (PTO)</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-6.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Behavior Detection</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-7.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">KYT using NFC</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-8.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Intrinsically Safe Device</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-9.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Mobility Device</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-10.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Fuel QC</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-11.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Multiple refueling service with QR code</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-wrap">
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-12.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">DR Remote Printing (Substation)</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-13.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Stand Plan</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-14.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">Top up Refueling</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center solution-item">
-                                    <div class="solution-item-cell cell-img">
-                                        <img class="item-img" src="assets/images/solution-icons/icon-refueling-15.svg">
-                                    </div>
-                                    <div class="solution-item-cell cell-text">
-                                        <p class="item-text">User Authentication & Permission</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
-    <!-- End Section: Solution -->
+        </section>
+        <!-- End Section: Introduction -->
 
-    <!-- Section: Equipment -->
-    <section id="equipment">
-        <div id="equipment-bg-filter" style="">
+        <!-- Section: About -->
+        <section id="about" class="" style="overflow: hidden">
+            <div class="container-fluid" style="max-width: 1440px;">
+                <div class="row align-items-center" style="padding: 80px 0;">
+                    <div id="" class="col-lg-7">
+                        <article id="article-about" class="bg-article-fade text-justify" data-aos="fade-left">
+                            <h3 class="text-uppercase">About Iris</h3>
+                            <h2 class="text-uppercase" style="color: #38BFD5; font-weight: 500; margin-bottom: 20px;">Who We Are</h2>
+                            <p style="">
+                                Intelligent Refuelling Information System (IRIS), is the first aviation refuelling
+                                management system that has been elaborately developed by integrated the
+                                management system with the safety information system for aircraft refuelling
+                                services.<br>
+                                As a world leading in aviation refuelling services, IRIS has succeeded in the
+                                development and designed for best experience of look and feel with user
+                                friendly for the best safety in operation. Besides, IRIS will significantly increase
+                                the performance of service especially the on-time performance and safety
+                                performance.<br>
+                                IRIS is highly flexible to support complex business process of the aviation
+                                refuelling services around the world.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-lg-5">
+                        <div style="background: black; width: 500px; height: 300px; max-width: 100%;" data-aos="fade-right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Section: About -->
+
+        <!-- Section: Vision -->
+        <section id="vision" style="overflow: hidden">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8">
-                        <article class="bg-article-fade" data-aos="fade-left">
-                            <h3 class="sub-heading text-uppercase" style="color: white;">Equipment</h3>
-                            <h2 class="text-uppercase font-weight-bold" style="margin-bottom: 20px;">Equipment used in the system</h2>
-                            <p style="max-width: 90%;">
-                                For a flexibility during service the system was designed to use enterprise mobility.
-                                8" Tablet as display device in driver cab. capturing data from digital register in real-time
-                                while taking 5" mobile out of the truck to operate work during service.
-                                Signing a delivery receipt as electronic ticket and send directly to Airline
-                                All Equipment were certified intrinsically safe ATEX Zone 1.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="equipment-footer-bg-filter" style="position: relative;">
-            <div style="position: absolute; bottom: 20px; right: 20px;">
-                <img src="assets/images/item-equipment-1.svg" style="height: 15vw; position: relative; bottom: 0; vertical-align: bottom;" data-aos="fade-right">
-                <img src="assets/images/item-equipment-2.svg" style="height: 20vw; position: relative; bottom: 0; vertical-align: bottom;" data-aos="fade-right">
-                <img src="assets/images/item-equipment-3.svg" style="height: 25vw; position: relative; bottom: 0; vertical-align: bottom;" data-aos="fade-right">
-            </div>
-        </div>
-    </section>
-    <!-- End Section: Equipment -->
-
-    <!-- Section: Contact -->
-    <section id="contact">
-        <div class="container-fluid" style="background: #005582; color: white;">
-            <div class="row">
-                <div class="col text-right" style="padding: 30px;">
-                    099-999-9999
-                </div>
-                <div class="col-auto" style="border: 1px solid white; margin: 15px 0; padding: 0;"></div>
-                <div class="col" style="padding: 30px;">
-                    iris@outlook.com
-                </div>
-            </div>
-        </div>
-        <div id="contact-bg-filter" class="container-fluid">
-            <div class="container" data-aos="fade-up">
-                <h2 class="text-uppercase">Contact Iris</h2>
-                <br>
-                <form method="post" action="">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="name">Name<sup></sup></label>
-                                <input type="text" class="form-control form-input" id="name" aria-describedby="emailHelp" placeholder="Please enter your full name." required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="name">Company Name<sup></sup></label>
-                                <input type="text" class="form-control form-input" id="company" aria-describedby="emailHelp" placeholder="Please enter your company name." required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="email">E-Mail<sup></sup></label>
-                                <input type="email" class="form-control form-input" id="email" aria-describedby="emailHelp" placeholder="Please enter your e-mail address." required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="phone">Phone Number <small>(Optional)</small></label>
-                                <input type="text" class="form-control form-input" id="phone" aria-describedby="emailHelp" placeholder="Please enter your phone number.">
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="subject">Subject<sup></sup></label>
-                                <input type="text" class="form-control form-input" id="subject" aria-describedby="emailHelp" placeholder="Please brief of what would you like to inquire." required>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="email">Message<sup></sup></label>
-                                <textarea class="form-control form-input" rows="10" placeholder="Full description of your inquiry." required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center">
-                            <button class="btn btn-primary text-uppercase">Request a demo</button>
-                        </div>
-                    </div>
-                </form>
-                <div class="row" style="margin-top: 60px;" data-aos="fade-up">
                     <div class="col-12">
-                        <h2 class="text-uppercase">Our Offices</h2>
-                    </div>
-                </div>
-                <div class="row" style="margin-top: 30px;">
-                    <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up">
-                        <article>
-                            <h4 class="text-uppercase">Thai</h4>
-                            <p>
-                                IRIS Software Ltd<br>
-                                2900-550 Burrard Street<br>
-                                Vancouver<br>
-                                BCV6C 0A3+1 843 258 1786
-                            </p>
-                        </article>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up">
-                        <article>
-                            <h4 class="text-uppercase">Canada</h4>
-                            <p>
-                                IRIS Software Ltd<br>
-                                2900-550 Burrard Street<br>
-                                Vancouver<br>
-                                BCV6C 0A3+1 843 258 1786
+                        <article id="text-vision">
+                            <h3 class="text-uppercase font-weight-light" style="color: initial;" data-aos="fade-right">Vision</h3>
+                            <h2 class="text-uppercase" data-aos="fade-right">Be a leader in aviation refuelling system</h2>
+                            <p data-aos="fade-right">
+                                We provide the best platform to enable real-time integration across the complete global fuel supply chain incorporating all the activities and parties involved.
+                                Our mobile computing expertise and innovative design enables the removal of paper and manual entry through fully understanding the needs of each
+                                stakeholder, our platform is designed to help realise significant efficiencies and optimisation across your organisation.
                             </p>
                         </article>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Section: Contact -->
-
-    <!-- Footer -->
-    <footer>
-
-
-    <!-- Footer -->
-    <footer>
-        <nav class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="logo-img-footer-wrapper">
-                        <img class="logo-img-footer" src="assets/images/iris_logo.svg"><br>
+                <div class="row vision-sm" style="margin: 50px 0 70px;">
+                    <div class="col-lg-4" data-aos="fade-up" style="margin-bottom: 20px;">
+                        <div class="card-vision" id="icon-1-sm">
+                            <img src="assets/images/icon-vision-1.jpg">
+                            <div class="card-vision-hover">
+                                <div class="container-fluid" style="height: 100%;">
+                                    <div class="row align-items-center" style="height: 100%;">
+                                        <div class="col-12">
+                                            <article class="align-items-center">
+                                                <h4 class="text-uppercase">Storing System</h4>
+                                                <p style="margin-top: 20px; margin-bottom: 0">
+                                                    BAFS quality oil storage for
+                                                    oil storage and forwarding to
+                                                    the filling station.
+                                                </p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="container-fluid">
-                        <div class="row no-gutters">
-                            <div class="col-lg-3">
-                                <h5 class="text-uppercase">Products & Services</h5>
-                                <ul>
-                                    <li>IRIS | Aerospace</li>
-                                    <li>IRIS | Essential</li>
-                                    <li>IRIS | Business Aviation</li>
-                                    <li>eHandshake</li>
-                                    <li>Bulk Storage Management</li>
-                                    <li>Vehicle Telemetry</li>
-                                    <li>Integrated Communications</li>
-                                    <li>Vehicle Management</li>
-                                    <li>Consultancy</li>
-                                </ul>
+                    <div class="col-lg-4" data-aos="fade-up" style="margin-bottom: 20px;">
+                        <div class="card-vision" id="icon-2-sm">
+                            <img src="assets/images/icon-vision-2.jpg">
+                            <div class="card-vision-hover">
+                                <div class="container-fluid" style="height: 100%;">
+                                    <div class="row align-items-center" style="height: 100%;">
+                                        <div class="col-12">
+                                            <article class="align-items-center">
+                                                <h4 class="text-uppercase">Storing System</h4>
+                                                <p style="margin-top: 20px; margin-bottom: 0">
+                                                    BAFS quality oil storage for
+                                                    oil storage and forwarding to
+                                                    the filling station.
+                                                </p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-lg-3">
-                                <h5 class="text-uppercase">Information</h5>
-                                <ul>
-                                    <li>Quality Policy</li>
-                                    <li>Anti-Bribery Policy</li>
-                                    <li>Business Ethics Statement</li>
-                                    <li>Environmental Policy</li>
-                                    <li>Privacy Policy</li>
-                                    <li>Export Control</li>
-                                    <li>Terms & Conditions</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-3">
-                                <h5 class="text-uppercase">Help & Support</h5>
-                                <ul>
-                                    <li>Support Portal</li>
-                                    <li>Contact Us</li>
-                                    <li>Recruitment</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-3">
-                                <h5 class="text-uppercase">Our Businesses</h5>
-                                <ul>
-                                    <li>IRIS Group</li>
-                                    <li>IRIS Systems</li>
-                                </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="card-vision" id="icon-3-sm">
+                            <img src="assets/images/icon-vision-3@2x.jpg">
+                            <div class="card-vision-hover">
+                                <div class="container-fluid" style="height: 100%;">
+                                    <div class="row align-items-center" style="height: 100%;">
+                                        <div class="col-12">
+                                            <article class="align-items-center">
+                                                <h4 class="text-uppercase">Storing System</h4>
+                                                <p style="margin-top: 20px; margin-bottom: 0">
+                                                    BAFS quality oil storage for
+                                                    oil storage and forwarding to
+                                                    the filling station.
+                                                </p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <div class="row vision-md" style="margin: 70px 0;" data-aos="fade-in">
+                    <div class="col-md-4">
+                        <div class="card-vision" id="icon-1">
+                            <img src="assets/images/icon-vision-1.jpg">
+                            <div class="card-vision-hover">
+                                <div class="container-fluid" style="height: 100%;">
+                                    <div class="row align-items-center" style="height: 100%;">
+                                        <div class="col-12">
+                                            <article class="align-items-center">
+                                                <h4 class="text-uppercase">Storing System</h4>
+                                                <p style="margin-top: 20px; margin-bottom: 0">
+                                                    BAFS quality oil storage for
+                                                    oil storage and forwarding to
+                                                    the filling station.
+                                                </p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-vision" id="icon-2">
+                            <img src="assets/images/icon-vision-2.jpg">
+                            <div class="card-vision-hover">
+                                <div class="container-fluid" style="height: 100%;">
+                                    <div class="row align-items-center" style="height: 100%;">
+                                        <div class="col-12">
+                                            <article class="align-items-center">
+                                                <h4 class="text-uppercase">Storing System</h4>
+                                                <p style="margin-top: 20px; margin-bottom: 0">
+                                                    BAFS quality oil storage for
+                                                    oil storage and forwarding to
+                                                    the filling station.
+                                                </p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-vision" id="icon-3">
+                            <img src="assets/images/icon-vision-3.svg">
+                            <div class="card-vision-hover">
+                                <div class="container-fluid" style="height: 100%;">
+                                    <div class="row align-items-center" style="height: 100%;">
+                                        <div class="col-12">
+                                            <article class="align-items-center">
+                                                <h4 class="text-uppercase">Storing System</h4>
+                                                <p style="margin-top: 20px; margin-bottom: 0">
+                                                    BAFS quality oil storage for
+                                                    oil storage and forwarding to
+                                                    the filling station.
+                                                </p>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center" data-aos="fade-up">
+                        <a href="#contact" class="btn btn-primary text-uppercase btn-request-demo">Show Case</a>
+                    </div>
+                </div>
             </div>
-        </nav>
+        </section>
+        <!-- End Section: Vision -->
 
-        <div id="footer-copyright">
-            &copy; 2020 IRIS Group Ltd. | All Rights Reserved | Made in Thailand | Company No. 9730618
-        </div>
-    </footer>
-    </footer>
-    <!-- End Footer -->
+        <!-- Section: Solution -->
+        <section id="solution" class="" style="overflow: hidden">
+            <div id="solution-bg-filter">
+                <div class="container" style="min-height: 400px; padding: 100px 10px;">
+                    <div id="solution-head">
+                        <h3 class="text-uppercase text-center" style="color: white;">Solution</h3>
+                        <h1 class="text-uppercase text-center">Integrated Refuelling Information System</h1>
+                    </div>
 
-    <!-- Included Scripts -->
-    <script src="dists/jquery/js/jquery-3.4.1.min.js"></script>
-    <script src="dists/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="dists/parallax/js/jquery.parallax.min.js"></script>
-    <script src="dists/paroller/js/jquery.paroller.min.js"></script> <!-- https://github.com/tgomilar/paroller.js/ -->
-    <script src="dists/aos/js/aos.js"></script>
-    <script src="dists/flickity/js/flickity.pkgd.min.js"></script> <!-- https://flickity.metafizzy.co/ -->
-    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+                    <div class="d-block d-xl-none text-center">
+                        <!--<img src="assets/images/icon-iris-fusion.svg" style="max-width: 500px; margin: 20px;">-->
+                    </div>
 
-    <!-- Custom Scripts -->
-    <script src="assets/js/script.js"></script>
+                    <div class="row justify-content-between" id="iris-solution">
+                        <div class="col-xl-5 cell-solution" id="contract-wrapper" style="">
+                            <img class="solution-category-icon solution-category-icon-left" src="assets/images/icon-solution-contract.svg" alt="Contract" style="" data-aos="fade-up">
+                            <div id="solution-contract-list" class="product-list" data-aos="fade-up">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item" style="width: 220px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-contract-4.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Auto Split Contract</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 cell-solution text-right" id="dispatch-wrapper" style="">
+                            <img class="solution-category-icon solution-category-icon-right" src="assets/images/icon-solution-h-dispatch.svg" alt="Dispatch" style="" data-aos="fade-up">
+                            <div id="solution-dispatch-list" class="product-list" data-aos="fade-up">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item" style="width: 165px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-1.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Info Plane<br>Operation Control</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 140px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-2.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Job Board</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 185px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-3.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Mobile Data Transfer Connectivity</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item" style="width: 165px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-4.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">All Flight Dispatch</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 140px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-5.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Interface with Pilot Device</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 185px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-6.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">GPS Location Tracking</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex d-xl-none flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item" style="width: 165px;">
+                                        <div class="solution-item-cell cell-img">
 
-</body>
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 185px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-7.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">RFID<br>Clock-in/Clock-out</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 140px;">
+                                        <div class="solution-item-cell cell-img">
+
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-none d-xl-flex flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item" style="width: 165px;">
+                                        <div class="solution-item-cell cell-img">
+
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 140px;">
+                                        <div class="solution-item-cell cell-img">
+
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item" style="width: 185px;">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-dispatch-7.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">RFID<br>Clock-in/Clock-out</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 cell-solution" id="cell-reconciliation">
+                            <img class="solution-category-icon solution-category-icon-left" src="assets/images/icon-solution-h-reconciliation.svg" alt="Reconciliation" style="" data-aos="fade-up">
+                            <div id="solution-reconciliation-list" class="product-list" data-aos="fade-up">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-1.svg">
+                                        </div>
+                                        <div class="solution-item-cell">
+                                            <p class="item-text">Storage Management</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-2.svg">
+                                        </div>
+                                        <div class="solution-item-cell">
+                                            <p class="item-text">Flexible Daily Stock Closing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-3.svg">
+                                        </div>
+                                        <div class="solution-item-cell">
+                                            <p class="item-text">DR Correction/Validation</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-4.svg">
+                                        </div>
+                                        <div class="solution-item-cell">
+                                            <p class="item-text">DR Customer Portal</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-5.svg">
+                                        </div>
+                                        <div class="solution-item-cell">
+                                            <p class="item-text">Sale Summary Dashboard</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-reconciliation-6.svg">
+                                        </div>
+                                        <div class="solution-item-cell">
+                                            <p class="item-text">Reporting</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7 cell-solution text-right" id="cell-refueling" style="">
+                            <img class="solution-category-icon solution-category-icon-right" src="assets/images/icon-solution-h-refueling-service.svg" alt="Refuelling Service" style="" data-aos="fade-up">
+                            <div id="solution-refueling-list" class="product-list" data-aos="fade-up">
+                                <div class="d-flex flex-wrap">
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-1.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Vehicle Daily Inspection</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-2.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Digital Register Integration</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-3.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Transaction Logging</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap">
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-5.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Power Take Off Detection (PTO)</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-8.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Intrinsically Safe Device</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-4.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Electronic Delivery Receipt (DR)/Signature</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap">
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-9.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Mobility Device</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-10.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Fuel QC</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-11.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Multiple refuelling service with QR code</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap">
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-13.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Stand Plan</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-14.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">Top up Refuelling</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center solution-item">
+                                        <div class="solution-item-cell cell-img">
+                                            <img class="item-img" src="assets/images/solution-icons/icon-refueling-15.svg">
+                                        </div>
+                                        <div class="solution-item-cell cell-text">
+                                            <p class="item-text">User Authentication & Permission</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Section: Solution -->
+
+        <!-- Section: Equipment -->
+        <section id="equipment" style="overflow: hidden">
+            <div id="equipment-bg-filter" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <article class="bg-article-fade" data-aos="fade-left">
+                                <h3 class="sub-heading text-uppercase" style="color: white;">Equipment</h3>
+                                <h2 class="text-uppercase font-weight-bold" style="margin-bottom: 20px;">Equipment used in the system</h2>
+                                <p style="max-width: 90%;">
+                                    For a flexibility during service the system was designed to use enterprise mobility.
+                                    8" Tablet as display device in driver cab. capturing data from digital register in real-time
+                                    while taking 5" mobile out of the truck to operate work during service.
+                                    Signing a delivery receipt as electronic ticket and send directly to Airline
+                                    All Equipment were certified intrinsically safe ATEX Zone 1.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="equipment-footer-bg-filter" style="position: relative;">
+                <div style="position: absolute; bottom: 20px; right: 20px;" data-aos="fade-right">
+                    <img src="assets/images/item-equipment-5.svg" id="equipment-5" style="position: relative; bottom: 0; vertical-align: bottom;">
+                    <img src="assets/images/item-equipment-4.svg" id="equipment-4" style="position: relative; bottom: 0; vertical-align: bottom;">
+                    <img src="assets/images/item-equipment-2.svg" id="equipment-2" style="position: relative; bottom: 0; vertical-align: bottom;">
+                    <img src="assets/images/item-equipment-3.svg" id="equipment-3" style="position: relative; bottom: 0; vertical-align: bottom;">
+                </div>
+            </div>
+        </section>
+        <!-- End Section: Equipment -->
+
+        <!-- Section: Contact -->
+        <section id="contact">
+            <div class="container-fluid" style="background: #005582; color: white;">
+                <div class="row">
+                    <div class="col-12 d-sm-none text-left" style="padding: 20px 20px 10px;">
+                        <img src="assets/images/icon-awesome-phone.svg" style="height: 25px;">
+                        <a style="color: white !important">+662-834-8961</a>&nbsp;
+                    </div>
+                    <div class="col d-none d-sm-block text-right" style="padding: 30px;">
+                        <a style="color: white !important">+662-834-8961</a>&nbsp;
+                        <img src="assets/images/icon-awesome-phone.svg" style="height: 25px;">
+                    </div>
+
+                    <div class="col-auto d-none d-sm-flex" style="border: 1px solid white; margin: 15px 0; padding: 0;"></div>
+
+                    <div class="col-12 d-sm-none text-left" style="padding: 10px 20px 20px;">
+                        <img src="assets/images/icon-mail.svg" style="height: 25px;">&nbsp;
+                        sales@irisrefuelling.com
+                    </div>
+                    <div class="col d-none d-sm-flex" style="padding: 30px;">
+                        <img src="assets/images/icon-mail.svg" style="height: 25px;">&nbsp;
+                        sales@irisrefuelling.com
+                    </div>
+                </div>
+            </div>
+            <div id="contact-bg-filter" class="container-fluid">
+                <div class="container" data-aos="fade-up">
+                    <h2 class="text-uppercase" style="color: white;">Contact Iris</h2>
+                    <br>
+                    <form method="post" action="mail.php">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="name">Name<sup></sup></label>
+                                    <input name="name" type="text" class="form-control form-input" id="name" aria-describedby="emailHelp" placeholder="Please enter your full name." required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="company">Company Name<sup></sup></label>
+                                    <input name="company" type="text" class="form-control form-input" id="company" aria-describedby="emailHelp" placeholder="Please enter your company name." required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">E-Mail<sup></sup></label>
+                                    <input name="email" type="email" class="form-control form-input" id="email" aria-describedby="emailHelp" placeholder="Please enter your e-mail address." required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <small>(Optional)</small></label>
+                                    <input name="phone" type="text" class="form-control form-input" id="phone" aria-describedby="emailHelp" placeholder="Please enter your phone number.">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="subject">Subject<sup></sup></label>
+                                    <input name="subject" type="text" class="form-control form-input" id="subject" aria-describedby="emailHelp" placeholder="Please brief of what would you like to inquire." required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="message">Message<sup></sup></label>
+                                    <textarea name="message" id="message" class="form-control form-input" rows="10" placeholder="Full description of your inquiry." required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary text-uppercase">Show Case</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row" style="margin-top: 60px;" data-aos="fade-up">
+                        <div class="col-12">
+                            <h2 class="text-uppercase" style="color: white;">Our Offices</h2>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 30px;">
+                        <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up">
+                            <article>
+                                <h4 class="text-uppercase">Thailand</h4>
+                                <p>
+                                    No. 171/2 Kamphaeng Phet 6 Road,<br>
+                                    Don Mueang Subdistrict,<br>
+                                    Don Mueang District,<br>
+                                    Bangkok 10210
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Section: Contact -->
+
+
+        <!-- Footer -->
+        <footer>
+            <!--<nav class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo-img-footer-wrapper">
+                            <img class="logo-img-footer" src="assets/images/iris_logo.svg"><br>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="container-fluid">
+                            <div class="row no-gutters">
+                                <div class="col-lg-3">
+                                    <h5 class="text-uppercase">Products & Services</h5>
+                                    <ul>
+                                        <li>IRIS | Aerospace</li>
+                                        <li>IRIS | Essential</li>
+                                        <li>IRIS | Business Aviation</li>
+                                        <li>eHandshake</li>
+                                        <li>Bulk Storage Management</li>
+                                        <li>Vehicle Telemetry</li>
+                                        <li>Integrated Communications</li>
+                                        <li>Vehicle Management</li>
+                                        <li>Consultancy</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5 class="text-uppercase">Information</h5>
+                                    <ul>
+                                        <li>Quality Policy</li>
+                                        <li>Anti-Bribery Policy</li>
+                                        <li>Business Ethics Statement</li>
+                                        <li>Environmental Policy</li>
+                                        <li>Privacy Policy</li>
+                                        <li>Export Control</li>
+                                        <li>Terms & Conditions</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5 class="text-uppercase">Help & Support</h5>
+                                    <ul>
+                                        <li>Support Portal</li>
+                                        <li>Contact Us</li>
+                                        <li>Recruitment</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <h5 class="text-uppercase">Our Businesses</h5>
+                                    <ul>
+                                        <li>IRIS Group</li>
+                                        <li>IRIS Systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>-->
+
+            <div id="footer-copyright">
+                &copy; 2020 IRIS Group Ltd. | All Rights Reserved.
+            </div>
+        </footer>
+
+
+        <script src="dists/jquery/js/jquery-3.4.1.min.js"></script>
+        <script src="dists/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="dists/parallax/js/jquery.parallax.min.js"></script>
+        <script src="dists/paroller/js/jquery.paroller.min.js"></script> <!-- https://github.com/tgomilar/paroller.js/ -->
+        <script src="dists/aos/js/aos.js"></script>
+        <script src="dists/flickity/js/flickity.pkgd.min.js"></script> <!-- https://flickity.metafizzy.co/ -->
+        <script src="dists/flickity/js/flickity-fade.js"></script>
+
+        <!-- Custom Scripts -->
+        <script src="assets/js/script.js"></script>
+
+    </body>
 </html>

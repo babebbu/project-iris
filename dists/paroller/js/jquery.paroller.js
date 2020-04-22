@@ -171,8 +171,8 @@
                 height = $this.outerHeight();
                 factor = setMovement.factor($this, width, options);
 
-                bgOffset = Math.round((offset - scrolling) * factor);
-                transform = Math.round(((offset - (windowHeight / 2) + height) - scrolling) * factor);
+                bgOffset = Math.round(elemTop * factor);
+                let transform = withScrollOffset($(document).scrollTop(), Math.round((elemTop - (windowHeight / 2) + height) * factor));
 
                 if (! working) {
                     window.requestAnimationFrame(scrollAction);
